@@ -1,0 +1,1020 @@
+fileFormatVersion: 2
+guid: b353bbdef6131f548a55655dbfad314c
+timeCreated: 1481042355
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Camera
+    100004: Lamp
+    100006: LeftElbow
+    100008: LeftElbow_end
+    100010: LeftFoot
+    100012: LeftFoot_end
+    100014: LeftHip
+    100016: LeftKnee
+    100018: LeftShoulder
+    100020: Neck
+    100022: Neck_end
+    100024: RightElbow
+    100026: RightElbow_end
+    100028: RightFoot
+    100030: RightFoot_end
+    100032: RightHip
+    100034: RightKnee
+    100036: RightShoulder
+    100038: Root
+    100040: //RootNode
+    100042: Waist
+    100044: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    400000: Armature
+    400002: Camera
+    400004: Lamp
+    400006: LeftElbow
+    400008: LeftElbow_end
+    400010: LeftFoot
+    400012: LeftFoot_end
+    400014: LeftHip
+    400016: LeftKnee
+    400018: LeftShoulder
+    400020: Neck
+    400022: Neck_end
+    400024: RightElbow
+    400026: RightElbow_end
+    400028: RightFoot
+    400030: RightFoot_end
+    400032: RightHip
+    400034: RightKnee
+    400036: RightShoulder
+    400038: Root
+    400040: //RootNode
+    400042: Waist
+    400044: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    4300000: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    7400000: Armature|Crouch
+    7400002: Armature|Dead
+    7400004: Armature|Hit
+    7400006: Armature|Idle
+    7400008: Armature|Putdown
+    7400010: Armature|Run
+    7400012: Armature|Shoot
+    7400014: Armature|Socko
+    7400016: Armature|Stomp
+    7400018: Armature|SweetChinMusic
+    7400020: Armature|UCantCMe
+    7400022: Armature|Walk
+    9500000: //RootNode
+    13700000: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Crouch
+      takeName: Armature|Crouch
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Dead
+      takeName: Armature|Dead
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Hit
+      takeName: Armature|Hit
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Putdown
+      takeName: Armature|Putdown
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Shoot
+      takeName: Armature|Shoot
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Socko
+      takeName: Armature|Socko
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Stomp
+      takeName: Armature|Stomp
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|SweetChinMusic
+      takeName: Armature|SweetChinMusic
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|UCantCMe
+      takeName: Armature|UCantCMe
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

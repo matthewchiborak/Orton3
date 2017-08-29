@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: ba0879c65949399499f196a849cdfb10
+timeCreated: 1504036434
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: LeftElbow
+    100004: LeftElbow_end
+    100006: LeftFoot
+    100008: LeftFoot_end
+    100010: LeftHip
+    100012: LeftKnee
+    100014: LeftShoulder
+    100016: Neck
+    100018: Neck_end
+    100020: Object001.004
+    100022: Object002.004
+    100024: Object003.004
+    100026: Object004.004
+    100028: Object005.004
+    100030: Object006.004
+    100032: Object007.004
+    100034: Object008.004
+    100036: Object009.004
+    100038: Object010.004
+    100040: Object011.004
+    100042: Object012.004
+    100044: Object013.004
+    100046: Object014.004
+    100048: Object015.004
+    100050: Object016.004
+    100052: Object017.004
+    100054: Object018.004
+    100056: Object019.004
+    100058: Object020.004
+    100060: Object021.004
+    100062: //RootNode
+    100064: RightElbow
+    100066: RightElbow_end
+    100068: RightFoot
+    100070: RightFoot_end
+    100072: RightHip
+    100074: RightKnee
+    100076: RightShoulder
+    100078: Root
+    100080: Waist
+    400000: Armature
+    400002: LeftElbow
+    400004: LeftElbow_end
+    400006: LeftFoot
+    400008: LeftFoot_end
+    400010: LeftHip
+    400012: LeftKnee
+    400014: LeftShoulder
+    400016: Neck
+    400018: Neck_end
+    400020: Object001.004
+    400022: Object002.004
+    400024: Object003.004
+    400026: Object004.004
+    400028: Object005.004
+    400030: Object006.004
+    400032: Object007.004
+    400034: Object008.004
+    400036: Object009.004
+    400038: Object010.004
+    400040: Object011.004
+    400042: Object012.004
+    400044: Object013.004
+    400046: Object014.004
+    400048: Object015.004
+    400050: Object016.004
+    400052: Object017.004
+    400054: Object018.004
+    400056: Object019.004
+    400058: Object020.004
+    400060: Object021.004
+    400062: //RootNode
+    400064: RightElbow
+    400066: RightElbow_end
+    400068: RightFoot
+    400070: RightFoot_end
+    400072: RightHip
+    400074: RightKnee
+    400076: RightShoulder
+    400078: Root
+    400080: Waist
+    4300000: Object011.004
+    4300002: Object005.004
+    4300004: Object007.004
+    4300006: Object001.004
+    4300008: Object013.004
+    4300010: Object019.004
+    4300012: Object004.004
+    4300014: Object012.004
+    4300016: Object009.004
+    4300018: Object015.004
+    4300020: Object020.004
+    4300022: Object021.004
+    4300024: Object010.004
+    4300026: Object002.004
+    4300028: Object003.004
+    4300030: Object014.004
+    4300032: Object017.004
+    4300034: Object018.004
+    4300036: Object016.004
+    4300038: Object006.004
+    4300040: Object008.004
+    7400000: Armature|AttackRKO
+    7400002: Armature|Crouch
+    7400004: Armature|Dead
+    7400006: Armature|FasterSlideIn
+    7400008: Armature|Hit
+    7400010: Armature|Idle
+    7400012: Armature|JumpOut
+    7400014: Armature|Putdown
+    7400016: Armature|RKO
+    7400018: Armature|RKOEnd
+    7400020: Armature|RKOLoop
+    7400022: Armature|Run
+    7400024: Armature|Shoot
+    7400026: Armature|SlideIn
+    7400028: Armature|Socko
+    7400030: Armature|Stomp
+    7400032: Armature|SweetChinMusic
+    7400034: Armature|UCantCMe
+    7400036: Armature|Walk
+    9500000: //RootNode
+    13700000: Object001.004
+    13700002: Object002.004
+    13700004: Object003.004
+    13700006: Object004.004
+    13700008: Object005.004
+    13700010: Object006.004
+    13700012: Object007.004
+    13700014: Object008.004
+    13700016: Object009.004
+    13700018: Object010.004
+    13700020: Object011.004
+    13700022: Object012.004
+    13700024: Object013.004
+    13700026: Object014.004
+    13700028: Object015.004
+    13700030: Object016.004
+    13700032: Object017.004
+    13700034: Object018.004
+    13700036: Object019.004
+    13700038: Object020.004
+    13700040: Object021.004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
