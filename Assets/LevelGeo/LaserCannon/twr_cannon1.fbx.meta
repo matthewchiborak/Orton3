@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 14e26dd9cf346fa4a936dfb9ea134f47
+timeCreated: 1504117007
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bone_ammoHousing
+    100002: bone_barrel
+    100004: bone_barrelBase
+    100006: bone_baseFoundation
+    100008: bone_chamberBottom
+    100010: bone_chamberTop
+    100012: bone_footBack
+    100014: bone_footFront
+    100016: bone_footLeft
+    100018: bone_footRight
+    100020: bone_gunBase
+    100022: bone_horizontalAxis
+    100024: bone_innerDoorL
+    100026: bone_innerDoorR
+    100028: bone_outerDoorL
+    100030: bone_outerDoorR
+    100032: bone_radar
+    100034: bone_radarBottom
+    100036: bone_radarTowerTop
+    100038: bone_recoil
+    100040: bone_sensorArray1
+    100042: bone_sensorArray2
+    100044: bone_tower1
+    100046: bone_tower2
+    100048: bone_verticalAxis
+    100050: Cannon01
+    100052: Cannon01 1
+    100054: node_fxcannonfire1
+    100056: node_fxcannonshell1
+    100058: root
+    100060: Scene Root
+    100062: //RootNode
+    400000: bone_ammoHousing
+    400002: bone_barrel
+    400004: bone_barrelBase
+    400006: bone_baseFoundation
+    400008: bone_chamberBottom
+    400010: bone_chamberTop
+    400012: bone_footBack
+    400014: bone_footFront
+    400016: bone_footLeft
+    400018: bone_footRight
+    400020: bone_gunBase
+    400022: bone_horizontalAxis
+    400024: bone_innerDoorL
+    400026: bone_innerDoorR
+    400028: bone_outerDoorL
+    400030: bone_outerDoorR
+    400032: bone_radar
+    400034: bone_radarBottom
+    400036: bone_radarTowerTop
+    400038: bone_recoil
+    400040: bone_sensorArray1
+    400042: bone_sensorArray2
+    400044: bone_tower1
+    400046: bone_tower2
+    400048: bone_verticalAxis
+    400050: Cannon01
+    400052: Cannon01 1
+    400054: node_fxcannonfire1
+    400056: node_fxcannonshell1
+    400058: root
+    400060: Scene Root
+    400062: //RootNode
+    4300000: Cannon01
+    9500000: //RootNode
+    13700000: Cannon01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

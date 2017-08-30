@@ -9,6 +9,10 @@ public class OrtonControlScript : MonoBehaviour
     private bool inAir;
     public float RKOVertForce;
 
+    //Prevent spam rko
+    public float RKOCooldown;
+    private float currentRKOCooldown;
+
     public float walkSpeed;
 
     public float runSpeed;
@@ -443,6 +447,9 @@ public class OrtonControlScript : MonoBehaviour
                 anim.SetBool("IsWalking", false);
                 anim.SetBool("IsRunning", false);
                 footSteps.Stop();
+
+                currentRKOCooldown = RKOCooldown;
+
                 //itemSource.clip = kickSwish;
                 //itemSource.Play();
             }
@@ -492,6 +499,12 @@ public class OrtonControlScript : MonoBehaviour
             sweetChinHitbox.enabled = false;
             
             controlsEnabled = true;
+        }
+
+        //Decrement the RKO cooldown counter
+        if(currentRKOCooldown > 0)
+        {
+            currentRKOCooldown--;
         }
     }
 
@@ -600,11 +613,43 @@ public class OrtonControlScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("Collide");
+    //    if (inAir)
+    //    {
+    //        Debug.Log("inAir");
+    //        if (other.CompareTag("Ground"))
+    //        {
+    //            Debug.Log("HitGround");
+    //            cooldown = 25;
+    //            anim.Play("Armature|RKOEnd", -1, 0f);
+    //            inAir = false;
+    //        }
+    //    }
+    //}
+
+    //void OnCollisionEnter(Collision a)
+    //{
+    //    Debug.Log("Collide");
+    //    if (inAir)
+    //    {
+    //        Debug.Log("inAir");
+    //        if (a.collider.CompareTag("Ground"))
+    //        {
+    //            Debug.Log("HitGround");
+    //            cooldown = 25;
+    //            anim.Play("Armature|RKOEnd", -1, 0f);
+    //            inAir = false;
+    //        }
+    //    }
+    //}
+
+    void OnCollisionStay(Collision a)
     {
-        if(inAir)
+        if (inAir && currentRKOCooldown <= 0)
         {
-            if(other.CompareTag("Ground"))
+            if (a.collider.CompareTag("Ground"))
             {
                 cooldown = 25;
                 anim.Play("Armature|RKOEnd", -1, 0f);
@@ -612,6 +657,23 @@ public class OrtonControlScript : MonoBehaviour
             }
         }
     }
+
+
+    //void OnTrigger(Collider other)
+    //{
+    //    Debug.Log("Collide");
+    //    if (inAir)
+    //    {
+    //        Debug.Log("inAir");
+    //        if (other.CompareTag("Ground"))
+    //        {
+    //            Debug.Log("HitGround");
+    //            cooldown = 25;
+    //            anim.Play("Armature|RKOEnd", -1, 0f);
+    //            inAir = false;
+    //        }
+    //    }
+    //}
 
     void FixedUpdate()
     {

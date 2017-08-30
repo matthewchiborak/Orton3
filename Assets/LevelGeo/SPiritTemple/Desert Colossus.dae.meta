@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 9a54c6a11747afa4c81f02b759561cb6
+timeCreated: 1504114344
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: node-00633B3A
+    100004: node-00B71FD5
+    100006: node-00B8ACAC
+    100008: node-00C940EE
+    100010: node-00F7E717
+    100012: node-0101703C
+    100014: node-01029822
+    100016: node-010CF21E
+    100018: node-01175939
+    100020: node-01189BAA
+    100022: node-0119E831
+    100024: node-013277CA
+    100026: node-01748312
+    100028: node-01D22306
+    100030: node-01DD78FE
+    100032: node-01E3B723
+    100034: node-01E929C1
+    100036: node-026EA292
+    100038: node-02701E81
+    100040: node-027E1210
+    100042: node-0293A9A3
+    100044: node-02C6361F
+    100046: node-03134865
+    100048: node-0330F6BD
+    100050: node-03392D59
+    100052: node-0365BD83
+    100054: node-037D150E
+    100056: node-03AD8B93
+    400000: //RootNode
+    400002: node-00633B3A
+    400004: node-00B71FD5
+    400006: node-00B8ACAC
+    400008: node-00C940EE
+    400010: node-00F7E717
+    400012: node-0101703C
+    400014: node-01029822
+    400016: node-010CF21E
+    400018: node-01175939
+    400020: node-01189BAA
+    400022: node-0119E831
+    400024: node-013277CA
+    400026: node-01748312
+    400028: node-01D22306
+    400030: node-01DD78FE
+    400032: node-01E3B723
+    400034: node-01E929C1
+    400036: node-026EA292
+    400038: node-02701E81
+    400040: node-027E1210
+    400042: node-0293A9A3
+    400044: node-02C6361F
+    400046: node-03134865
+    400048: node-0330F6BD
+    400050: node-03392D59
+    400052: node-0365BD83
+    400054: node-037D150E
+    400056: node-03AD8B93
+    2300000: node-00633B3A
+    2300002: node-00B71FD5
+    2300004: node-00B8ACAC
+    2300006: node-00C940EE
+    2300008: node-00F7E717
+    2300010: node-0101703C
+    2300012: node-01029822
+    2300014: node-010CF21E
+    2300016: node-01175939
+    2300018: node-01189BAA
+    2300020: node-0119E831
+    2300022: node-013277CA
+    2300024: node-01748312
+    2300026: node-01D22306
+    2300028: node-01DD78FE
+    2300030: node-01E3B723
+    2300032: node-01E929C1
+    2300034: node-026EA292
+    2300036: node-02701E81
+    2300038: node-027E1210
+    2300040: node-0293A9A3
+    2300042: node-02C6361F
+    2300044: node-03134865
+    2300046: node-0330F6BD
+    2300048: node-03392D59
+    2300050: node-0365BD83
+    2300052: node-037D150E
+    2300054: node-03AD8B93
+    3300000: node-00633B3A
+    3300002: node-00B71FD5
+    3300004: node-00B8ACAC
+    3300006: node-00C940EE
+    3300008: node-00F7E717
+    3300010: node-0101703C
+    3300012: node-01029822
+    3300014: node-010CF21E
+    3300016: node-01175939
+    3300018: node-01189BAA
+    3300020: node-0119E831
+    3300022: node-013277CA
+    3300024: node-01748312
+    3300026: node-01D22306
+    3300028: node-01DD78FE
+    3300030: node-01E3B723
+    3300032: node-01E929C1
+    3300034: node-026EA292
+    3300036: node-02701E81
+    3300038: node-027E1210
+    3300040: node-0293A9A3
+    3300042: node-02C6361F
+    3300044: node-03134865
+    3300046: node-0330F6BD
+    3300048: node-03392D59
+    3300050: node-0365BD83
+    3300052: node-037D150E
+    3300054: node-03AD8B93
+    4300000: node-03392D59
+    4300002: node-01029822
+    4300004: node-01175939
+    4300006: node-01D22306
+    4300008: node-00633B3A
+    4300010: node-037D150E
+    4300012: node-0365BD83
+    4300014: node-0293A9A3
+    4300016: node-0330F6BD
+    4300018: node-00B8ACAC
+    4300020: node-027E1210
+    4300022: node-026EA292
+    4300024: node-01E3B723
+    4300026: node-0101703C
+    4300028: node-010CF21E
+    4300030: node-01748312
+    4300032: node-01189BAA
+    4300034: node-01DD78FE
+    4300036: node-00C940EE
+    4300038: node-03134865
+    4300040: node-03AD8B93
+    4300042: node-0119E831
+    4300044: node-01E929C1
+    4300046: node-013277CA
+    4300048: node-02C6361F
+    4300050: node-00F7E717
+    4300052: node-00B71FD5
+    4300054: node-02701E81
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
