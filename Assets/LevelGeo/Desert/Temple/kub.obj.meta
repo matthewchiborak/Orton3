@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 0a9dd05641ea9f64fb6d22da00614ba4
+timeCreated: 1504305921
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: fire_blue2
+    100002: fox02
+    100004: gate
+    100006: huuin
+    100008: kabe05
+    100010: kabepipe00
+    100012: //RootNode
+    100014: mag01
+    100016: minifox
+    100018: pillar
+    100020: slot
+    100022: water03
+    100024: water04
+    100026: yuka99
+    400000: fire_blue2
+    400002: fox02
+    400004: gate
+    400006: huuin
+    400008: kabe05
+    400010: kabepipe00
+    400012: //RootNode
+    400014: mag01
+    400016: minifox
+    400018: pillar
+    400020: slot
+    400022: water03
+    400024: water04
+    400026: yuka99
+    2300000: fire_blue2
+    2300002: fox02
+    2300004: gate
+    2300006: huuin
+    2300008: kabe05
+    2300010: kabepipe00
+    2300012: mag01
+    2300014: minifox
+    2300016: pillar
+    2300018: slot
+    2300020: water03
+    2300022: water04
+    2300024: yuka99
+    3300000: fire_blue2
+    3300002: fox02
+    3300004: gate
+    3300006: huuin
+    3300008: kabe05
+    3300010: kabepipe00
+    3300012: mag01
+    3300014: minifox
+    3300016: pillar
+    3300018: slot
+    3300020: water03
+    3300022: water04
+    3300024: yuka99
+    4300000: fire_blue2
+    4300002: fox02
+    4300004: gate
+    4300006: huuin
+    4300008: kabe05
+    4300010: kabepipe00
+    4300012: mag01
+    4300014: minifox
+    4300016: pillar
+    4300018: slot
+    4300020: water03
+    4300022: water04
+    4300024: yuka99
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

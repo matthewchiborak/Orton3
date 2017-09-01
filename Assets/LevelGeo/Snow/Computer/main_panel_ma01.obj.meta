@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 0ff9598c21e50e245beb397ce061f163
+timeCreated: 1504291286
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: polygon0
+    100004: polygon1
+    100006: polygon10
+    100008: polygon11
+    100010: polygon12
+    100012: polygon13
+    100014: polygon14
+    100016: polygon15
+    100018: polygon16
+    100020: polygon18
+    100022: polygon19
+    100024: polygon2
+    100026: polygon20
+    100028: polygon21
+    100030: polygon3
+    100032: polygon4
+    100034: polygon5
+    100036: polygon6
+    100038: polygon7
+    100040: polygon8
+    100042: polygon9
+    400000: //RootNode
+    400002: polygon0
+    400004: polygon1
+    400006: polygon10
+    400008: polygon11
+    400010: polygon12
+    400012: polygon13
+    400014: polygon14
+    400016: polygon15
+    400018: polygon16
+    400020: polygon18
+    400022: polygon19
+    400024: polygon2
+    400026: polygon20
+    400028: polygon21
+    400030: polygon3
+    400032: polygon4
+    400034: polygon5
+    400036: polygon6
+    400038: polygon7
+    400040: polygon8
+    400042: polygon9
+    2300000: polygon0
+    2300002: polygon1
+    2300004: polygon10
+    2300006: polygon11
+    2300008: polygon12
+    2300010: polygon13
+    2300012: polygon14
+    2300014: polygon15
+    2300016: polygon16
+    2300018: polygon18
+    2300020: polygon19
+    2300022: polygon2
+    2300024: polygon20
+    2300026: polygon21
+    2300028: polygon3
+    2300030: polygon4
+    2300032: polygon5
+    2300034: polygon6
+    2300036: polygon7
+    2300038: polygon8
+    2300040: polygon9
+    3300000: polygon0
+    3300002: polygon1
+    3300004: polygon10
+    3300006: polygon11
+    3300008: polygon12
+    3300010: polygon13
+    3300012: polygon14
+    3300014: polygon15
+    3300016: polygon16
+    3300018: polygon18
+    3300020: polygon19
+    3300022: polygon2
+    3300024: polygon20
+    3300026: polygon21
+    3300028: polygon3
+    3300030: polygon4
+    3300032: polygon5
+    3300034: polygon6
+    3300036: polygon7
+    3300038: polygon8
+    3300040: polygon9
+    4300000: polygon0
+    4300002: polygon1
+    4300004: polygon10
+    4300006: polygon11
+    4300008: polygon12
+    4300010: polygon13
+    4300012: polygon14
+    4300014: polygon15
+    4300016: polygon16
+    4300018: polygon18
+    4300020: polygon19
+    4300022: polygon2
+    4300024: polygon20
+    4300026: polygon21
+    4300028: polygon3
+    4300030: polygon4
+    4300032: polygon5
+    4300034: polygon6
+    4300036: polygon7
+    4300038: polygon8
+    4300040: polygon9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
