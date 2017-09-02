@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 896ade8894878044aa8630133bab227c
+timeCreated: 1504388305
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: geom-00070A1E
+    100002: geom-00083DD9
+    100004: geom-004A2CA9
+    100006: geom-007797C1
+    100008: geom-008B260D
+    100010: geom-00AAF566
+    100012: geom-00C4EDF4
+    100014: geom-00C99E5E
+    100016: geom-00E45675
+    100018: geom-00F68D0B
+    100020: geom-00F96FC5
+    100022: geom-0146DE6B
+    100024: geom-014A68C4
+    100026: geom-01563FC2
+    100028: geom-01629F15
+    100030: geom-017B5C6A
+    100032: geom-0202A09C
+    100034: geom-0217A57C
+    100036: geom-0223FBA4
+    100038: geom-024F4A7C
+    100040: geom-029B91F1
+    100042: geom-02CF60F9
+    100044: geom-02D4D161
+    100046: geom-02EC5D9C
+    100048: geom-03169154
+    100050: geom-03392D59
+    100052: geom-0343D8C9
+    100054: geom-036C601B
+    100056: geom-0378217B
+    100058: geom-037DD1CA
+    100060: geom-039DAEE5
+    100062: geom-03CB1BF5
+    100064: //RootNode
+    400000: geom-00070A1E
+    400002: geom-00083DD9
+    400004: geom-004A2CA9
+    400006: geom-007797C1
+    400008: geom-008B260D
+    400010: geom-00AAF566
+    400012: geom-00C4EDF4
+    400014: geom-00C99E5E
+    400016: geom-00E45675
+    400018: geom-00F68D0B
+    400020: geom-00F96FC5
+    400022: geom-0146DE6B
+    400024: geom-014A68C4
+    400026: geom-01563FC2
+    400028: geom-01629F15
+    400030: geom-017B5C6A
+    400032: geom-0202A09C
+    400034: geom-0217A57C
+    400036: geom-0223FBA4
+    400038: geom-024F4A7C
+    400040: geom-029B91F1
+    400042: geom-02CF60F9
+    400044: geom-02D4D161
+    400046: geom-02EC5D9C
+    400048: geom-03169154
+    400050: geom-03392D59
+    400052: geom-0343D8C9
+    400054: geom-036C601B
+    400056: geom-0378217B
+    400058: geom-037DD1CA
+    400060: geom-039DAEE5
+    400062: geom-03CB1BF5
+    400064: //RootNode
+    2300000: geom-00070A1E
+    2300002: geom-00083DD9
+    2300004: geom-004A2CA9
+    2300006: geom-007797C1
+    2300008: geom-008B260D
+    2300010: geom-00AAF566
+    2300012: geom-00C4EDF4
+    2300014: geom-00C99E5E
+    2300016: geom-00E45675
+    2300018: geom-00F68D0B
+    2300020: geom-00F96FC5
+    2300022: geom-0146DE6B
+    2300024: geom-014A68C4
+    2300026: geom-01563FC2
+    2300028: geom-01629F15
+    2300030: geom-017B5C6A
+    2300032: geom-0202A09C
+    2300034: geom-0217A57C
+    2300036: geom-0223FBA4
+    2300038: geom-024F4A7C
+    2300040: geom-029B91F1
+    2300042: geom-02CF60F9
+    2300044: geom-02D4D161
+    2300046: geom-02EC5D9C
+    2300048: geom-03169154
+    2300050: geom-03392D59
+    2300052: geom-0343D8C9
+    2300054: geom-036C601B
+    2300056: geom-0378217B
+    2300058: geom-037DD1CA
+    2300060: geom-039DAEE5
+    2300062: geom-03CB1BF5
+    3300000: geom-00070A1E
+    3300002: geom-00083DD9
+    3300004: geom-004A2CA9
+    3300006: geom-007797C1
+    3300008: geom-008B260D
+    3300010: geom-00AAF566
+    3300012: geom-00C4EDF4
+    3300014: geom-00C99E5E
+    3300016: geom-00E45675
+    3300018: geom-00F68D0B
+    3300020: geom-00F96FC5
+    3300022: geom-0146DE6B
+    3300024: geom-014A68C4
+    3300026: geom-01563FC2
+    3300028: geom-01629F15
+    3300030: geom-017B5C6A
+    3300032: geom-0202A09C
+    3300034: geom-0217A57C
+    3300036: geom-0223FBA4
+    3300038: geom-024F4A7C
+    3300040: geom-029B91F1
+    3300042: geom-02CF60F9
+    3300044: geom-02D4D161
+    3300046: geom-02EC5D9C
+    3300048: geom-03169154
+    3300050: geom-03392D59
+    3300052: geom-0343D8C9
+    3300054: geom-036C601B
+    3300056: geom-0378217B
+    3300058: geom-037DD1CA
+    3300060: geom-039DAEE5
+    3300062: geom-03CB1BF5
+    4300000: geom-00F96FC5
+    4300002: geom-00C4EDF4
+    4300004: geom-02EC5D9C
+    4300006: geom-024F4A7C
+    4300008: geom-00C99E5E
+    4300010: geom-03169154
+    4300012: geom-03CB1BF5
+    4300014: geom-0223FBA4
+    4300016: geom-0343D8C9
+    4300018: geom-01629F15
+    4300020: geom-007797C1
+    4300022: geom-00F68D0B
+    4300024: geom-00AAF566
+    4300026: geom-0202A09C
+    4300028: geom-0217A57C
+    4300030: geom-02D4D161
+    4300032: geom-017B5C6A
+    4300034: geom-01563FC2
+    4300036: geom-00083DD9
+    4300038: geom-004A2CA9
+    4300040: geom-029B91F1
+    4300042: geom-0378217B
+    4300044: geom-03392D59
+    4300046: geom-0146DE6B
+    4300048: geom-037DD1CA
+    4300050: geom-036C601B
+    4300052: geom-02CF60F9
+    4300054: geom-014A68C4
+    4300056: geom-039DAEE5
+    4300058: geom-008B260D
+    4300060: geom-00E45675
+    4300062: geom-00070A1E
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
