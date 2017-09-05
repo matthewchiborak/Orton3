@@ -7,28 +7,59 @@ public class CollideWithPickup : MonoBehaviour {
     public AudioSource itemSource;
     public AudioClip pickupSFX;
 
+    public bool isForOrton;
+    public NewStoredInfoScript storedInfoShawn;
+    public NewStoredInfoScriptOrton storedInfoOrton;
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("BandagePickup"))
+        if(isForOrton)
         {
-            StoredInfoScript.persistantInfo.pickupItem(0);
-            Destroy(other.gameObject);
-            itemSource.clip = pickupSFX;
-            itemSource.Play();
+            if (other.gameObject.CompareTag("BandagePickup"))
+            {
+                storedInfoOrton.pickupItem(0);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
+            if (other.gameObject.CompareTag("PillsPickup"))
+            {
+                storedInfoOrton.pickupItem(1);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
+            if (other.gameObject.CompareTag("BeerPickup"))
+            {
+                storedInfoOrton.pickupItem(4);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
         }
-        if (other.gameObject.CompareTag("PillsPickup"))
+        else
         {
-            StoredInfoScript.persistantInfo.pickupItem(1);
-            Destroy(other.gameObject);
-            itemSource.clip = pickupSFX;
-            itemSource.Play();
-        }
-        if (other.gameObject.CompareTag("BeerPickup"))
-        {
-            StoredInfoScript.persistantInfo.pickupItem(4);
-            Destroy(other.gameObject);
-            itemSource.clip = pickupSFX;
-            itemSource.Play();
+            if (other.gameObject.CompareTag("BandagePickup"))
+            {
+                storedInfoShawn.pickupItem(0);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
+            if (other.gameObject.CompareTag("PillsPickup"))
+            {
+                storedInfoShawn.pickupItem(1);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
+            if (other.gameObject.CompareTag("BeerPickup"))
+            {
+                storedInfoShawn.pickupItem(4);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
         }
     }
 }

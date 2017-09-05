@@ -155,7 +155,10 @@ public class OrtonControlScript : MonoBehaviour
             anim.Play("Armature|Putdown", -1, 0f);
             controlsEnabled = false;
             cooldown = 60;
-            Instantiate(usedCan, new Vector3((float)(transform.position.x), (float)(transform.position.y), (float)(transform.position.z)), transform.rotation);
+            GameObject tempCan = Instantiate(usedCan, new Vector3((float)(transform.position.x), (float)(transform.position.y), (float)(transform.position.z)), transform.rotation);
+            tempCan.GetComponent<CanControlScript>().isForOrton = true;
+            tempCan.GetComponent<CanControlScript>().storedOrton = storedInfo;
+            tempCan.GetComponent<CanControlScript>().isReady = true;
         }
         else if (storedInfo.itemSelected == 5)
         {
