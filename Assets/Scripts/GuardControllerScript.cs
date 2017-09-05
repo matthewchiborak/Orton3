@@ -27,7 +27,12 @@ public class GuardControllerScript : MonoBehaviour {
     private float callinWaitTime = 2f;
     private float callinTimer = 0f;
 
+    public bool isForOrton;
+    public NewStoredInfoScript storedInfoShawn;
+    public NewStoredInfoScriptOrton storedInfoOrton;
+
     public ShawnMichaelsControl playerScript;
+    public OrtonControlScript ortonPlayerScript;
     private float timeForShot = 1.5f;
     private float shotTimer = 0.875f;
     bool midChase = false;
@@ -54,13 +59,15 @@ public class GuardControllerScript : MonoBehaviour {
 
     void Awake()
     {
-        player = StoredInfoScript.persistantInfo.getPlayerTransform();
-        playerScript = StoredInfoScript.persistantInfo.getPlayerScript();
+        //player = StoredInfoScript.persistantInfo.getPlayerTransform();
+        //playerScript = StoredInfoScript.persistantInfo.getPlayerScript();
     }
 
     // Update is called once per frame
     void Update()
     {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
         //Despawn the enemy if its dead
         if (dead)
         {
@@ -134,13 +141,25 @@ public class GuardControllerScript : MonoBehaviour {
                     stunTimer = stunTime;
                 }
             }
-            else if(enemySight.playerInSight && StoredInfoScript.persistantInfo.currentHealth > 0)
+            else if(enemySight.playerInSight && isForOrton && storedInfoOrton.currentHealth > 0)
             {
                 isStunned = false;
                 anim.SetBool("Stunned", false);
                 Shooting();
             }
-            else if(enemySight.personalLastSighting != StoredInfoScript.persistantInfo.resetPosition && StoredInfoScript.persistantInfo.currentHealth > 0)
+            else if (enemySight.playerInSight && !isForOrton && storedInfoShawn.currentHealth > 0)
+            {
+                isStunned = false;
+                anim.SetBool("Stunned", false);
+                Shooting();
+            }
+            else if(isForOrton && enemySight.personalLastSighting != storedInfoOrton.resetPosition && storedInfoOrton.currentHealth > 0)
+            {
+                isStunned = false;
+                anim.SetBool("Stunned", false);
+                Chasing();
+            }
+            else if (!isForOrton && enemySight.personalLastSighting != storedInfoShawn.resetPosition && storedInfoShawn.currentHealth > 0)
             {
                 isStunned = false;
                 anim.SetBool("Stunned", false);
@@ -199,7 +218,14 @@ public class GuardControllerScript : MonoBehaviour {
             //Rotate to point at shawn
 
             gunSource.Play();
-            playerScript.hitByBullet();
+            if (playerScript != null)
+            {
+                playerScript.hitByBullet();
+            }
+            else if(ortonPlayerScript != null)
+            {
+                ortonPlayerScript.hitByBullet();
+            }
             
             //anim.Play("Armature|Shoot", -1, 0f);
             shotTimer = shotTimer - timeForShot;
@@ -248,11 +274,20 @@ public class GuardControllerScript : MonoBehaviour {
 
             if(chaseTimer > chaseWaitTime)
             {
-                StoredInfoScript.persistantInfo.lastPosition = StoredInfoScript.persistantInfo.resetPosition;
-                enemySight.personalLastSighting = StoredInfoScript.persistantInfo.resetPosition;
+                if(isForOrton)
+                {
+                    storedInfoOrton.lastPosition = storedInfoOrton.resetPosition;
+                    enemySight.personalLastSighting = storedInfoOrton.resetPosition;
+                }
+                else
+                {
+                    storedInfoShawn.lastPosition = storedInfoShawn.resetPosition;
+                    enemySight.personalLastSighting = storedInfoShawn.resetPosition;
+                }
+                
                 chaseTimer = 0f;
                 //Play where'd you go
-                whereYouGo.Play();
+                //whereYouGo.Play();
             }
         }
         else
@@ -275,7 +310,7 @@ public class GuardControllerScript : MonoBehaviour {
         nav.speed = patrolSpeed;
         nav.Resume();
 
-        if (nav.destination == StoredInfoScript.persistantInfo.resetPosition || nav.remainingDistance < nav.stoppingDistance)
+        if ((isForOrton && nav.destination == storedInfoOrton.resetPosition) || (!isForOrton && nav.destination == storedInfoShawn.resetPosition) || nav.remainingDistance < nav.stoppingDistance)
         {
             patrolTimer += Time.deltaTime;
             anim.SetBool("Walking", false);

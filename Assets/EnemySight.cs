@@ -3,6 +3,10 @@ using System.Collections;
 
 public class EnemySight : MonoBehaviour {
 
+    public bool isForOrton;
+    public NewStoredInfoScript storedInfoShawn;
+    public NewStoredInfoScriptOrton storedInfoOrton;
+
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
     public Vector3 personalLastSighting; //For hearing
@@ -27,23 +31,34 @@ public class EnemySight : MonoBehaviour {
 
     void Awake()
     {
-        player = StoredInfoScript.persistantInfo.getPlayerGameObject();
-        playerAnim = StoredInfoScript.persistantInfo.getPlayerAnim();
-        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        personalLastSighting = StoredInfoScript.persistantInfo.resetPosition;
-        previousSighting = StoredInfoScript.persistantInfo.resetPosition;
+        //player = StoredInfoScript.persistantInfo.getPlayerGameObject();
+        //playerAnim = StoredInfoScript.persistantInfo.getPlayerAnim();
+        //nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        //personalLastSighting = StoredInfoScript.persistantInfo.resetPosition;
+        //previousSighting = StoredInfoScript.persistantInfo.resetPosition;
     }
 
     void Update()
     {
-        if (StoredInfoScript.persistantInfo.lastPosition != previousSighting)
+        if (isForOrton && storedInfoOrton.lastPosition != previousSighting)
         {
-            personalLastSighting = StoredInfoScript.persistantInfo.lastPosition;
+            personalLastSighting = storedInfoOrton.lastPosition;
+        }
+        if (!isForOrton && storedInfoShawn.lastPosition != previousSighting)
+        {
+            personalLastSighting = storedInfoShawn.lastPosition;
         }
 
-        previousSighting = StoredInfoScript.persistantInfo.lastPosition;
-
-        if (StoredInfoScript.persistantInfo.currentHealth < 0f)
+        if(isForOrton)
+        {
+            previousSighting = storedInfoOrton.lastPosition;
+        }
+        else
+        {
+            previousSighting = storedInfoShawn.lastPosition;
+        }
+        
+        if ((isForOrton && storedInfoOrton.currentHealth < 0f) || (!isForOrton && storedInfoShawn.currentHealth < 0f))
         {
             playerInSight = false;
         }
@@ -89,7 +104,8 @@ public class EnemySight : MonoBehaviour {
 
                 if (Physics.Raycast(transform.position + new Vector3(0f,10f,0f), direction.normalized, out hit, 6 * col.radius))
                 {
-                    if(hit.collider.gameObject.CompareTag("Player") && !StoredInfoScript.persistantInfo.ignorePlayer)
+                    Debug.Log("Seen");
+                    if(isForOrton && hit.collider.gameObject.CompareTag("Player") && !storedInfoOrton.ignorePlayer)
                     {
                         playerInSight = true;
 
@@ -104,13 +120,30 @@ public class EnemySight : MonoBehaviour {
                         anim.SetBool("PlayerInSight", true);
                         //Vector3 tempVector = new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + 10f, hit.collider.gameObject.transform.position.z);
                         //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                        StoredInfoScript.persistantInfo.lastPosition = hit.collider.gameObject.transform.position;
+                        storedInfoOrton.lastPosition = hit.collider.gameObject.transform.position;
+                    }
+                    else if (!isForOrton && hit.collider.gameObject.CompareTag("Player") && !storedInfoShawn.ignorePlayer)
+                    {
+                        playerInSight = true;
+
+                        if (!anim.GetBool("PlayerInSight"))
+                        {
+                            mark.SetActive(true);
+
+                            markTimer = timeForMark;
+                            alertSource.Play();
+                        }
+
+                        anim.SetBool("PlayerInSight", true);
+                        //Vector3 tempVector = new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + 10f, hit.collider.gameObject.transform.position.z);
+                        //StoredInfoScript.persistantInfo.lastPosition = tempVector;
+                        storedInfoShawn.lastPosition = hit.collider.gameObject.transform.position;
                     }
                 }
             }
 
             //Hear him
-            if(playerAnim.GetBool("IsRunning") && !StoredInfoScript.persistantInfo.ignorePlayer)
+            if(playerAnim.GetBool("IsRunning") && isForOrton && !storedInfoOrton.ignorePlayer)
             {
                 if (!anim.GetBool("PlayerInSight"))
                 {
@@ -125,7 +158,25 @@ public class EnemySight : MonoBehaviour {
                 //alertSource.Play();
                 //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
                 //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                StoredInfoScript.persistantInfo.lastPosition = player.transform.position;
+                storedInfoOrton.lastPosition = player.transform.position;
+            }
+            else if(playerAnim.GetBool("IsRunning") && !isForOrton && !storedInfoShawn.ignorePlayer)
+            {
+                Debug.Log("Heard");
+                if (!anim.GetBool("PlayerInSight"))
+                {
+                    mark.SetActive(true);
+
+                    markTimer = timeForMark;
+                    alertSource.Play();
+                }
+
+                playerInSight = true;
+                anim.SetBool("PlayerInSight", true);
+                //alertSource.Play();
+                //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
+                //StoredInfoScript.persistantInfo.lastPosition = tempVector;
+                storedInfoShawn.lastPosition = player.transform.position;
             }
         }
     }
