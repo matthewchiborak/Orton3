@@ -444,6 +444,7 @@ public class OrtonControlScript : MonoBehaviour
                 rb.AddForce(new Vector3(movement.x, RKOVertForce, movement.z), ForceMode.Impulse);
                 inAir = true;
 
+                sweetChinHitbox.enabled = true;
                 anim.Play("Armature|AttackRKO", -1, 0f);
                 controlsEnabled = false;
                 anim.SetBool("IsWalking", false);

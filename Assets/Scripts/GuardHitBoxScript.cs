@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class GuardHitBoxScript : MonoBehaviour {
-    
+
+    public bool isForOrton;
     public AudioClip sweetChinMusic;
+    public AudioClip RKO; 
 
 	// Use this for initialization
 	//void Start () {
@@ -24,7 +26,14 @@ public class GuardHitBoxScript : MonoBehaviour {
             GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
             GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
             GetComponentInParent<GuardControllerScript>().dead = true;
-            GetComponentInParent<AudioSource>().clip = sweetChinMusic;
+            if (!isForOrton)
+            {
+                GetComponentInParent<AudioSource>().clip = sweetChinMusic;
+            }
+            else
+            {
+                GetComponentInParent<AudioSource>().clip = RKO;
+            }
             GetComponentInParent<AudioSource>().Play();
         }
 

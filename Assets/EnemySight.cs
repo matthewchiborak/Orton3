@@ -104,7 +104,7 @@ public class EnemySight : MonoBehaviour {
 
                 if (Physics.Raycast(transform.position + new Vector3(0f,10f,0f), direction.normalized, out hit, 6 * col.radius))
                 {
-                    Debug.Log("Seen");
+                    
                     if(isForOrton && hit.collider.gameObject.CompareTag("Player") && !storedInfoOrton.ignorePlayer)
                     {
                         playerInSight = true;
@@ -162,7 +162,7 @@ public class EnemySight : MonoBehaviour {
             }
             else if(playerAnim.GetBool("IsRunning") && !isForOrton && !storedInfoShawn.ignorePlayer)
             {
-                Debug.Log("Heard");
+               
                 if (!anim.GetBool("PlayerInSight"))
                 {
                     mark.SetActive(true);
