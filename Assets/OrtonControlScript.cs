@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OrtonControlScript : MonoBehaviour 
 {
+    public NewStoredInfoScriptOrton storedInfo;
+
     public Animator anim;
 
     private bool inAir;
@@ -109,12 +111,12 @@ public class OrtonControlScript : MonoBehaviour
     void useItem()
     {
         //CHeck if enough of an item to use
-        if (!StoredInfoScript.persistantInfo.checkIfEnough())
+        if (!storedInfo.checkIfEnough())
         {
             return;
         }
 
-        if (StoredInfoScript.persistantInfo.itemSelected == 0)
+        if (storedInfo.itemSelected == 0)
         {
             //Heal
             anim.Play("Armature|Idle", -1, 0f);
@@ -123,9 +125,9 @@ public class OrtonControlScript : MonoBehaviour
             cooldown = 5;
             itemSource.clip = itemUse;
             itemSource.Play();
-            StoredInfoScript.persistantInfo.useHealthPack();
+            storedInfo.useHealthPack();
         }
-        else if (StoredInfoScript.persistantInfo.itemSelected == 1)
+        else if (storedInfo.itemSelected == 1)
         {
             //HGH
             anim.Play("Armature|Idle", -1, 0f);
@@ -134,7 +136,7 @@ public class OrtonControlScript : MonoBehaviour
             itemSource.clip = itemUse;
             itemSource.Play();
         }
-        else if (StoredInfoScript.persistantInfo.itemSelected == 2)
+        else if (storedInfo.itemSelected == 2)
         {
             anim.Play("Armature|Stomp", -1, 0f);
             controlsEnabled = false;
@@ -142,20 +144,20 @@ public class OrtonControlScript : MonoBehaviour
             cooldown = 60;
             spawnBoltTimer = 0.75f;
         }
-        else if (StoredInfoScript.persistantInfo.itemSelected == 3)
+        else if (storedInfo.itemSelected == 3)
         {
             anim.Play("Armature|Socko", -1, 0f);
             controlsEnabled = false;
             sockoing = true;
         }
-        else if (StoredInfoScript.persistantInfo.itemSelected == 4)
+        else if (storedInfo.itemSelected == 4)
         {
             anim.Play("Armature|Putdown", -1, 0f);
             controlsEnabled = false;
             cooldown = 60;
             Instantiate(usedCan, new Vector3((float)(transform.position.x), (float)(transform.position.y), (float)(transform.position.z)), transform.rotation);
         }
-        else if (StoredInfoScript.persistantInfo.itemSelected == 5)
+        else if (storedInfo.itemSelected == 5)
         {
             anim.Play("Armature|UCantCMe", -1, 0f);
             controlsEnabled = false;
@@ -168,27 +170,27 @@ public class OrtonControlScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            StoredInfoScript.persistantInfo.selectItem(0);
+            storedInfo.selectItem(0);
         }
         else if (Input.GetKey(KeyCode.Alpha2))
         {
-            StoredInfoScript.persistantInfo.selectItem(1);
+            storedInfo.selectItem(1);
         }
         else if (Input.GetKey(KeyCode.Alpha3))
         {
-            StoredInfoScript.persistantInfo.selectItem(2);
+            storedInfo.selectItem(2);
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
-            StoredInfoScript.persistantInfo.selectItem(3);
+            storedInfo.selectItem(3);
         }
         else if (Input.GetKey(KeyCode.Alpha5))
         {
-            StoredInfoScript.persistantInfo.selectItem(4);
+            storedInfo.selectItem(4);
         }
         else if (Input.GetKey(KeyCode.Alpha6))
         {
-            StoredInfoScript.persistantInfo.selectItem(5);
+            storedInfo.selectItem(5);
         }
     }
 
@@ -250,7 +252,7 @@ public class OrtonControlScript : MonoBehaviour
         if (invincibility <= 0)
         {
             anim.SetBool("IsCrouching", false);
-            StoredInfoScript.persistantInfo.hitByBullet();
+            storedInfo.hitByBullet();
             anim.SetBool("IsWalking", false);
             anim.SetBool("IsRunning", false);
             hurtSound.Play();
@@ -267,7 +269,7 @@ public class OrtonControlScript : MonoBehaviour
         if (invincibility <= 0)
         {
             anim.SetBool("IsCrouching", false);
-            StoredInfoScript.persistantInfo.hitByBullet();
+            storedInfo.hitByBullet();
             anim.SetBool("IsWalking", false);
             anim.SetBool("IsRunning", false);
             hurtSound.Play();
@@ -284,7 +286,7 @@ public class OrtonControlScript : MonoBehaviour
         if (invincibility <= 0)
         {
             anim.SetBool("IsCrouching", false);
-            StoredInfoScript.persistantInfo.hitByDust();
+            storedInfo.hitByDust();
             anim.SetBool("IsWalking", false);
             anim.SetBool("IsRunning", false);
 
@@ -302,7 +304,7 @@ public class OrtonControlScript : MonoBehaviour
     {
         if (invincibility <= 0)
         {
-            StoredInfoScript.persistantInfo.hitByCactus();
+            storedInfo.hitByCactus();
 
             hurtSound.Play();
         }
@@ -326,14 +328,14 @@ public class OrtonControlScript : MonoBehaviour
     {
         if (transform.position.y < -1000)
         {
-            transform.position = StoredInfoScript.persistantInfo.lastLoadLocation;
+            //transform.position = storedInfo.lastLoadLocation;
             rb.velocity = new Vector3(0, 0, 0);
         }
 
         if (Input.GetButtonDown("pause") && !onePress)
         {
             onePress = true;
-            StoredInfoScript.persistantInfo.MapToggle();
+            storedInfo.MapToggle();
         }
 
         if (Input.GetButtonUp("pause"))
@@ -377,7 +379,7 @@ public class OrtonControlScript : MonoBehaviour
         //Make sure stay invisible if load new scene
         if (invisibleOn)
         {
-            StoredInfoScript.persistantInfo.ignorePlayer = true;
+            storedInfo.ignorePlayer = true;
         }
 
         if (CMETimer > 0)
@@ -390,15 +392,15 @@ public class OrtonControlScript : MonoBehaviour
                     invisibleOn = false;
                     
                     bodyModel.SetActive(true);
-                    StoredInfoScript.persistantInfo.ignorePlayer = false;
+                    storedInfo.ignorePlayer = false;
                 }
                 else
                 {
                     invisibleOn = true;
                     
                     bodyModel.SetActive(false);
-                    
-                    StoredInfoScript.persistantInfo.ignorePlayer = true;
+
+                    storedInfo.ignorePlayer = true;
                 }
             }
         }
@@ -432,11 +434,11 @@ public class OrtonControlScript : MonoBehaviour
                 //RKO
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    movement = rb.transform.forward * StoredInfoScript.persistantInfo.speedMulitplier * runSpeed;// * Time.deltaTime;
+                    movement = rb.transform.forward * storedInfo.speedMulitplier * runSpeed;// * Time.deltaTime;
                 }
                 else
                 {
-                    movement = rb.transform.forward * StoredInfoScript.persistantInfo.speedMulitplier * walkSpeed;// * Time.deltaTime;
+                    movement = rb.transform.forward * storedInfo.speedMulitplier * walkSpeed;// * Time.deltaTime;
                 }
                 
                 rb.AddForce(new Vector3(movement.x, RKOVertForce, movement.z), ForceMode.Impulse);
@@ -461,13 +463,13 @@ public class OrtonControlScript : MonoBehaviour
         }
 
         //Reduce speed powerup
-        if (StoredInfoScript.persistantInfo.speedMulitplier > 1.0)
+        if (storedInfo.speedMulitplier > 1.0)
         {
-            StoredInfoScript.persistantInfo.speedMulitplier -= 0.005f;
+            storedInfo.speedMulitplier -= 0.005f;
         }
-        if (StoredInfoScript.persistantInfo.speedMulitplier < 1.0)
+        if (storedInfo.speedMulitplier < 1.0)
         {
-            StoredInfoScript.persistantInfo.speedMulitplier += 0.005f;
+            storedInfo.speedMulitplier += 0.005f;
         }
 
         if (sockoing)
@@ -595,11 +597,11 @@ public class OrtonControlScript : MonoBehaviour
             //Move the player
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                movement = rb.transform.forward * StoredInfoScript.persistantInfo.speedMulitplier * runSpeed * Time.deltaTime;
+                movement = rb.transform.forward * storedInfo.speedMulitplier * runSpeed * Time.deltaTime;
             }
             else
             {
-                movement = rb.transform.forward * StoredInfoScript.persistantInfo.speedMulitplier * walkSpeed * Time.deltaTime;
+                movement = rb.transform.forward * storedInfo.speedMulitplier * walkSpeed * Time.deltaTime;
             }
             rb.MovePosition(transform.position + movement);
         }
@@ -715,7 +717,7 @@ public class OrtonControlScript : MonoBehaviour
         else if(inAir)
         {
             //Move the player
-            movement = rb.transform.forward * StoredInfoScript.persistantInfo.speedMulitplier * RKOSpeed * Time.deltaTime;
+            movement = rb.transform.forward * storedInfo.speedMulitplier * RKOSpeed * Time.deltaTime;
             rb.MovePosition(transform.position + movement);
         }
     }

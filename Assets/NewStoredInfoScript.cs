@@ -1,18 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 using System.Text;
 
-public class StoredInfoScript : MonoBehaviour {
-
-    public static StoredInfoScript persistantInfo;
-
-    public string currentScene;
-    public Vector3 lastLoadLocation = new Vector3(0, 0, 0);
-    public Vector3 lastLoadRotation = new Vector3(0, 0, 0);
+public class NewStoredInfoScript : MonoBehaviour {
+    
+    //For shawn
 
     public float currentHealth = 100;
     public float maxHealth = 100;
@@ -37,11 +34,7 @@ public class StoredInfoScript : MonoBehaviour {
     //For block out screen when load new area
     public Image loadScreen;
     public Text loadText;
-
-    //Progress level for triggering cutscene, boss fights, and locked doors
-    //private int progressLevel = 0;
-    public int progressLevel = 0;
-
+    
     //Last know position of player
     public Vector3 lastPosition = new Vector3(10000f, 10000f, 10000f);
     public Vector3 resetPosition = new Vector3(10000f, 10000f, 10000f);
@@ -67,12 +60,9 @@ public class StoredInfoScript : MonoBehaviour {
     public Image bossBarBack;
     public Image bossBarFront;
     public Text bossName;
-
-    public AudioSource cookieCrunch;
-
+    
     private bool paused = false;
     public GameObject pausedScreen;
-    public Image[] roomImages;//14
 
     public CutscenePlayer theScenePlayer;
 
@@ -92,30 +82,16 @@ public class StoredInfoScript : MonoBehaviour {
 
         string assetText;
 
-        //using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
-        //{
-        //    assetText = streamReader.ReadToEnd();
-        //}
+        using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
+        {
+            assetText = streamReader.ReadToEnd();
+        }
 
+        //READ THE SAVE FILE AND SET EVERYTHING IN THE CORRECT POSITIONS
         //progressLevel = Int32.Parse(assetText);
 
         //Enable item accordingly
-        //if(progressLevel > 6)
-        {
-            enableItem(2);
-        }
-        //if (progressLevel > 14)
-        {
-            enableItem(4);
-        }
-        //if (progressLevel > 25)
-        {
-            enableItem(3);
-        }
-        //if (progressLevel > 32)
-        {
-            enableItem(5);
-        }
+        //enableItem(2);
 
         startVect = new Vector2(1, 1);
         endVect = new Vector2(0, 0);
@@ -248,10 +224,10 @@ public class StoredInfoScript : MonoBehaviour {
         return shawnMichaelsScript;
     }
 
-    public string getCurrentScene()
-    {
-        return currentScene;
-    }
+    //public string getCurrentScene()
+    //{
+    //    return currentScene;
+    //}
 
     public float getBossPercentage()
     {
@@ -296,13 +272,7 @@ public class StoredInfoScript : MonoBehaviour {
         }
     }
 
-    public void hitByPillow()
-    {
-        speedMulitplier = 0.1f;
-        cookieCrunch.time = 1.3f;
-        cookieCrunch.Play();
-    }
-
+    
     public void hitByDust()
     {
         currentHealth -= 7;
@@ -374,11 +344,11 @@ public class StoredInfoScript : MonoBehaviour {
         //StoredInfoScript.persistantInfo.blockScreen();
         //blockScreen();
 
-        currentHealth = maxHealth;
-        healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
+        //currentHealth = maxHealth;
+        //healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
 
-        currentBossHealth = maxBossHealth;
-        bossBarFront.transform.localScale = new Vector3(currentBossHealth / maxBossHealth, 1, 1);
+        //currentBossHealth = maxBossHealth;
+        //bossBarFront.transform.localScale = new Vector3(currentBossHealth / maxBossHealth, 1, 1);
 
         //if(progressLevel == 5)
         //{
@@ -400,7 +370,7 @@ public class StoredInfoScript : MonoBehaviour {
 
         //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
 
-        SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
+        //SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
     }
 
     public void useHealthPack()
@@ -444,120 +414,126 @@ public class StoredInfoScript : MonoBehaviour {
 
     public void switchTracks()
     {
-        if (currentScene == "backstage" && currentTrack != 16)
+        if (currentTrack != 0)
         {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "bar")
-        {
-            backgroundMusic.clip = BGTracks[1];
-            currentTrack = 1;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "cubicles" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "entrance" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "food" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "forest")
-        {
-            backgroundMusic.clip = BGTracks[5];
-            currentTrack = 5;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "garage" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "gym" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "hallway" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "lockerroom" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "office")
-        {
-            backgroundMusic.clip = BGTracks[10];
-            currentTrack = 10;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "outside")
-        {
-            backgroundMusic.clip = BGTracks[11];
-        }
-        else if (currentScene == "outsideDay")
-        {
-            backgroundMusic.clip = BGTracks[12];
-        }
-        else if (currentScene == "shop" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "space")
-        {
-            backgroundMusic.clip = BGTracks[14];
-        }
-        else if (currentScene == "stairway")
-        {
-            backgroundMusic.clip = BGTracks[15];
-            currentTrack = 15;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "test" && currentTrack != 16)
-        {
-            currentTrack = 16;
-            backgroundMusic.clip = BGTracks[16];
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "void")
-        {
-            backgroundMusic.clip = BGTracks[17];
-            currentTrack = 17;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "washroom")
-        {
-            backgroundMusic.clip = BGTracks[10];
-            currentTrack = 10;
-            backgroundMusic.Play();
-        }
-        else if (currentScene == "testground")
-        {
-            backgroundMusic.clip = BGTracks[0];
             currentTrack = 0;
+            backgroundMusic.clip = BGTracks[0];
             backgroundMusic.Play();
         }
+        //if (currentScene == "backstage" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "bar")
+        //{
+        //    backgroundMusic.clip = BGTracks[1];
+        //    currentTrack = 1;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "cubicles" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "entrance" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "food" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "forest")
+        //{
+        //    backgroundMusic.clip = BGTracks[5];
+        //    currentTrack = 5;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "garage" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "gym" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "hallway" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "lockerroom" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "office")
+        //{
+        //    backgroundMusic.clip = BGTracks[10];
+        //    currentTrack = 10;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "outside")
+        //{
+        //    backgroundMusic.clip = BGTracks[11];
+        //}
+        //else if (currentScene == "outsideDay")
+        //{
+        //    backgroundMusic.clip = BGTracks[12];
+        //}
+        //else if (currentScene == "shop" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "space")
+        //{
+        //    backgroundMusic.clip = BGTracks[14];
+        //}
+        //else if (currentScene == "stairway")
+        //{
+        //    backgroundMusic.clip = BGTracks[15];
+        //    currentTrack = 15;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "test" && currentTrack != 16)
+        //{
+        //    currentTrack = 16;
+        //    backgroundMusic.clip = BGTracks[16];
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "void")
+        //{
+        //    backgroundMusic.clip = BGTracks[17];
+        //    currentTrack = 17;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "washroom")
+        //{
+        //    backgroundMusic.clip = BGTracks[10];
+        //    currentTrack = 10;
+        //    backgroundMusic.Play();
+        //}
+        //else if (currentScene == "testground")
+        //{
+        //    backgroundMusic.clip = BGTracks[0];
+        //    currentTrack = 0;
+        //    backgroundMusic.Play();
+        //}
     }
 
     public void MusicFading()
@@ -574,10 +550,10 @@ public class StoredInfoScript : MonoBehaviour {
         }
     }
 
-    public int getProgressLevel()
-    {
-        return progressLevel;
-    }
+    //public int getProgressLevel()
+    //{
+    //    return progressLevel;
+    //}
 
     public void blockScreen()
     {
@@ -598,58 +574,36 @@ public class StoredInfoScript : MonoBehaviour {
 
     void Awake()
     {
-        if (persistantInfo == null)
+        //if (persistantInfo == null)
         {
-            DontDestroyOnLoad(gameObject);
-            persistantInfo = this;
+            //DontDestroyOnLoad(gameObject);
+            //persistantInfo = this;
             abilityEnabled[0] = true; //Only 1 and 0 will be true when done testing
             abilityEnabled[1] = true;
-            abilityEnabled[2] = false;
-            abilityEnabled[3] = false;
-            abilityEnabled[4] = false;
-            abilityEnabled[5] = false;
+            abilityEnabled[2] = true;
+            abilityEnabled[3] = true;
+            abilityEnabled[4] = true;
+            abilityEnabled[5] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString();
         }
-        else if (persistantInfo != this)
-        {
-            Destroy(persistantInfo);
-        }
+        //else if (persistantInfo != this)
+        //{
+        //    Destroy(persistantInfo);
+        //}
     }
-
-    public void IncreaseProgress()
-    {
-
-    }
-    //{
-
-    //    progressLevel++;
-
-    //    if ((progressLevel < 14) || (progressLevel > 19 && progressLevel < 26) || (progressLevel > 27))
-    //    {
-    //        //I should do checks so I don't screw myself out of progress
-    //        System.IO.File.WriteAllText("Assets/Resources/Save.txt", progressLevel.ToString());
-    //    }
-
-        
-    //}
-
+    
     public void enableItem(int itemNumber)
     {
         abilityEnabled[itemNumber] = true;
     }
-
-    public void updateUI()
-    {
-
-    }
-
+    
     public void pickupItem(int itemId)
     {
         if (itemId == 0)
         {
-            if(bandageAmount >= maxItems)
+            if (bandageAmount >= maxItems)
             {
                 return;
             }
@@ -694,14 +648,14 @@ public class StoredInfoScript : MonoBehaviour {
 
         if (itemNo == 0)
         {
-            if(bandageAmount > 0)
+            if (bandageAmount > 0)
             {
                 bandageAmount--;
                 itemAmount.text = bandageAmount.ToString();
 
                 //Increase the health
                 currentHealth += 50;
-                if(currentHealth > maxHealth)
+                if (currentHealth > maxHealth)
                 {
                     currentHealth = maxHealth;
                 }
@@ -739,7 +693,7 @@ public class StoredInfoScript : MonoBehaviour {
     public void selectItem(int item)
     {
         //Check if the item is enabled
-        if(!abilityEnabled[item])
+        if (!abilityEnabled[item])
         //if (abilityEnabled[item])
         {
             return;
@@ -751,11 +705,11 @@ public class StoredInfoScript : MonoBehaviour {
         itemImage.material = itemMaterials[item];
 
         //Swap the quantity if its a resource that can be used up
-        if(item == 0)
+        if (item == 0)
         {
             itemAmount.text = bandageAmount.ToString();
         }
-        else if(item == 1)
+        else if (item == 1)
         {
             itemAmount.text = pillsAmount.ToString();
         }
@@ -774,10 +728,10 @@ public class StoredInfoScript : MonoBehaviour {
 
     //}
 
-    
 
-	//// Update is called once per frame
-	void Update ()
+
+    //// Update is called once per frame
+    void Update()
     {
         MusicFading();
 
@@ -806,7 +760,7 @@ public class StoredInfoScript : MonoBehaviour {
         {
             Time.timeScale = 0.2f;
 
-            if(deathTimer < TimeForDie)
+            if (deathTimer < TimeForDie)
             {
                 deathTimer += Time.deltaTime;
                 GameOverScreen.color = new Color(1, 1, 1, deathTimer * 2 / TimeForDie);
@@ -826,5 +780,5 @@ public class StoredInfoScript : MonoBehaviour {
                 panicMusic.volume = 0;
             }
         }
-	}
+    }
 }
