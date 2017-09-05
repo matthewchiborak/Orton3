@@ -16,7 +16,7 @@ public class BackgroundManagementScript : MonoBehaviour {
     {
         string theScene = StoredInfoScript.persistantInfo.getCurrentScene();
 
-        if (theScene == "backstage")
+        if(theScene == "backstage")
         {
             BGAudioSource.clip = BGTracks[0];
         }

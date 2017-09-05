@@ -92,27 +92,27 @@ public class StoredInfoScript : MonoBehaviour {
 
         string assetText;
 
-        //using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
-        //{
-        //    assetText = streamReader.ReadToEnd();
-        //}
+        using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
+        {
+            assetText = streamReader.ReadToEnd();
+        }
 
-        //progressLevel = Int32.Parse(assetText);
+        progressLevel = Int32.Parse(assetText);
 
         //Enable item accordingly
-        //if(progressLevel > 6)
+        if(progressLevel > 6)
         {
             enableItem(2);
         }
-        //if (progressLevel > 14)
+        if (progressLevel > 14)
         {
             enableItem(4);
         }
-        //if (progressLevel > 25)
+        if (progressLevel > 25)
         {
             enableItem(3);
         }
-        //if (progressLevel > 32)
+        if (progressLevel > 32)
         {
             enableItem(5);
         }
@@ -133,14 +133,14 @@ public class StoredInfoScript : MonoBehaviour {
 
     public void EndBoss()
     {
-        //if (progressLevel == 5)
-        //{
-        //    enableItem(2);
-        //}
-        //if (progressLevel == 15)
-        //{
-        //    enableItem(4);
-        //}
+        if (progressLevel == 5)
+        {
+            enableItem(2);
+        }
+        if (progressLevel == 15)
+        {
+            enableItem(4);
+        }
 
         currentBossHealth = maxBossHealth;
         bossBarBack.enabled = false;
@@ -148,13 +148,13 @@ public class StoredInfoScript : MonoBehaviour {
         bossName.enabled = false;
         switchTracks();
         //progressLevel++;
-        //IncreaseProgress();
+        IncreaseProgress();
     }
 
     public void PlayCutscene(int sceneToPlay)
     {
         //progressLevel++;
-        //IncreaseProgress();
+        IncreaseProgress();
 
         //Turn off all audiosources
         backgroundMusic.Stop();
@@ -174,51 +174,51 @@ public class StoredInfoScript : MonoBehaviour {
         shawnMichaelsScript.itemSource.volume = 1;
 
         //Boss happens afterwards
-        //if (progressLevel == 3)
-        //{
-        //    //progressLevel++;
-        //    IncreaseProgress();
-        //}
-        //if (progressLevel == 12)
-        //{
-        //    //progressLevel++;
-        //    IncreaseProgress();
-        //}
-        ////if (progressLevel == 15)
-        ////{
-        ////    progressLevel++;
-        ////}
+        if (progressLevel == 3)
+        {
+            //progressLevel++;
+            IncreaseProgress();
+        }
+        if (progressLevel == 12)
+        {
+            //progressLevel++;
+            IncreaseProgress();
+        }
         //if (progressLevel == 15)
         //{
-        //    enableItem(4);
+        //    progressLevel++;
         //}
-        //if (progressLevel == 17)
-        //{
-        //    playBearMusic();
-        //    //progressLevel++;
-        //    IncreaseProgress();
-        //}
-        //if (progressLevel == 22)
-        //{
-        //    enableItem(2);
-        //    //progressLevel++;
-        //    IncreaseProgress();
-        //}
-        //if (progressLevel == 26)
-        //{
-        //    enableItem(3);
-        //    //progressLevel++;
-        //    //IncreaseProgress();
-        //}
-        //if (progressLevel == 29)
-        //{
-        //    //progressLevel++;
-        //    IncreaseProgress();
-        //}
-        //if (progressLevel == 33)
-        //{
-        //    enableItem(5);
-        //}
+        if (progressLevel == 15)
+        {
+            enableItem(4);
+        }
+        if (progressLevel == 17)
+        {
+            playBearMusic();
+            //progressLevel++;
+            IncreaseProgress();
+        }
+        if (progressLevel == 22)
+        {
+            enableItem(2);
+            //progressLevel++;
+            IncreaseProgress();
+        }
+        if (progressLevel == 26)
+        {
+            enableItem(3);
+            //progressLevel++;
+            //IncreaseProgress();
+        }
+        if (progressLevel == 29)
+        {
+            //progressLevel++;
+            IncreaseProgress();
+        }
+        if (progressLevel == 33)
+        {
+            enableItem(5);
+        }
     }
 
     public void hitBoss(float damage)
@@ -347,6 +347,114 @@ public class StoredInfoScript : MonoBehaviour {
             //Stop time
             Time.timeScale = 0;
             pausedScreen.SetActive(true);
+
+            if (currentScene == "entrance")
+            {
+                roomImages[0].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[0].color = Color.white;
+            }
+            if (currentScene == "test")
+            {
+                roomImages[1].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[1].color = Color.white;
+            }
+            if (currentScene == "food")
+            {
+                roomImages[2].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[2].color = Color.white;
+            }
+            if (currentScene == "hallway")
+            {
+                roomImages[3].color = Color.yellow;
+                //Also the other one
+                roomImages[13].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[3].color = Color.white;
+                roomImages[13].color = Color.white;
+            }
+            if (currentScene == "backstage")
+            {
+                roomImages[4].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[4].color = Color.white;
+            }
+            if (currentScene == "bar")
+            {
+                roomImages[5].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[5].color = Color.white;
+            }
+            if (currentScene == "gym")
+            {
+                roomImages[6].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[6].color = Color.white;
+            }
+            if (currentScene == "shop")
+            {
+                roomImages[7].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[7].color = Color.white;
+            }
+            if (currentScene == "washroom")
+            {
+                roomImages[8].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[8].color = Color.white;
+            }
+            if (currentScene == "garage" || currentScene == "testground")
+            {
+                roomImages[9].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[9].color = Color.white;
+            }
+            if (currentScene == "cubicles")
+            {
+                roomImages[10].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[10].color = Color.white;
+            }
+            if (currentScene == "office")
+            {
+                roomImages[11].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[11].color = Color.white;
+            }
+            if (currentScene == "stairway")
+            {
+                roomImages[12].color = Color.yellow;
+            }
+            else
+            {
+                roomImages[12].color = Color.white;
+            }
         }
         else
         {
@@ -371,8 +479,7 @@ public class StoredInfoScript : MonoBehaviour {
     {
         Time.timeScale = 1.0f;
 
-        //StoredInfoScript.persistantInfo.blockScreen();
-        //blockScreen();
+        StoredInfoScript.persistantInfo.blockScreen();
 
         currentHealth = maxHealth;
         healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
@@ -380,25 +487,23 @@ public class StoredInfoScript : MonoBehaviour {
         currentBossHealth = maxBossHealth;
         bossBarFront.transform.localScale = new Vector3(currentBossHealth / maxBossHealth, 1, 1);
 
-        //if(progressLevel == 5)
-        //{
-        //    progressLevel = 2;
-        //}
+        if(progressLevel == 5)
+        {
+            progressLevel = 2;
+        }
 
-        //if (progressLevel == 24)
-        //{
-        //    progressLevel = 21;
-        //}
+        if (progressLevel == 24)
+        {
+            progressLevel = 21;
+        }
 
         //other.gameObject.GetComponentInParent<Transform>().position = playerLocation;
-        //shawnMichaels.transform.position = lastLoadLocation;
+        shawnMichaels.transform.position = lastLoadLocation;
         //other.gameObject.GetComponentInParent<Transform>().rotation = Quaternion.Euler(playerRotation);
-        //shawnMichaels.transform.rotation = Quaternion.Euler(lastLoadRotation);
+        shawnMichaels.transform.rotation = Quaternion.Euler(lastLoadRotation);
         //SceneManager.LoadScene("fight", LoadSceneMode.Single);
 
-        //StoredInfoScript.persistantInfo.lastPosition = StoredInfoScript.persistantInfo.resetPosition;
-
-        //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
+        StoredInfoScript.persistantInfo.lastPosition = StoredInfoScript.persistantInfo.resetPosition;
 
         SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
     }
@@ -621,19 +726,16 @@ public class StoredInfoScript : MonoBehaviour {
     public void IncreaseProgress()
     {
 
-    }
-    //{
+        progressLevel++;
 
-    //    progressLevel++;
-
-    //    if ((progressLevel < 14) || (progressLevel > 19 && progressLevel < 26) || (progressLevel > 27))
-    //    {
-    //        //I should do checks so I don't screw myself out of progress
-    //        System.IO.File.WriteAllText("Assets/Resources/Save.txt", progressLevel.ToString());
-    //    }
+        if ((progressLevel < 14) || (progressLevel > 19 && progressLevel < 26) || (progressLevel > 27))
+        {
+            //I should do checks so I don't screw myself out of progress
+            System.IO.File.WriteAllText("Assets/Resources/Save.txt", progressLevel.ToString());
+        }
 
         
-    //}
+    }
 
     public void enableItem(int itemNumber)
     {
@@ -784,20 +886,20 @@ public class StoredInfoScript : MonoBehaviour {
         //Create a way for the player of quitting the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //if (progressLevel == 5 || progressLevel == 4 || progressLevel == 3 || progressLevel == 2)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "1");
-            //}
+            if (progressLevel == 5 || progressLevel == 4 || progressLevel == 3 || progressLevel == 2)
+            {
+                System.IO.File.WriteAllText("Assets/Resources/Save.txt", "1");
+            }
 
-            //if (progressLevel == 24 || progressLevel == 23 || progressLevel == 22 || progressLevel == 21)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "20");
-            //}
+            if (progressLevel == 24 || progressLevel == 23 || progressLevel == 22 || progressLevel == 21)
+            {
+                System.IO.File.WriteAllText("Assets/Resources/Save.txt", "20");
+            }
 
-            //if (progressLevel == 29 || progressLevel == 30 || progressLevel == 31 || progressLevel == 32)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "28");
-            //}
+            if (progressLevel == 29 || progressLevel == 30 || progressLevel == 31 || progressLevel == 32)
+            {
+                System.IO.File.WriteAllText("Assets/Resources/Save.txt", "28");
+            }
 
             Application.Quit();
         }

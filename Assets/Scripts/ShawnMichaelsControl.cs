@@ -470,6 +470,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             {
                 enterExitRingCount = 0;
                 enterExitRing = false;
+                //anim.Play("Armature|Idle", -1, 0f);
             }
         }
 
@@ -825,6 +826,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
         if (controlsEnabled)
         {
+            //Move(moveHorizontal, moveVertical);
             Move2(moveHorizontal, moveVertical);
         }
     }
