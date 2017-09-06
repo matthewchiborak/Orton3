@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 public class CutscenePlayer : MonoBehaviour {
 
+    public bool isForOrton;
+    public NewStoredInfoScript shawn;
+    public NewStoredInfoScriptOrton orton;
+
     private bool playing = false;
 
     public AudioSource soundEffect;
@@ -91,7 +95,15 @@ public class CutscenePlayer : MonoBehaviour {
                     dialog.enabled = false;
                     dialogRight.enabled = false;
                     Time.timeScale = 1.0f;
-                    StoredInfoScript.persistantInfo.CutsceneJustEnded();
+
+                    if(isForOrton)
+                    {
+                        orton.CutsceneJustEnded();
+                    }
+                    else
+                    {
+                        shawn.CutsceneJustEnded();
+                    }
 
                     return;
                 }

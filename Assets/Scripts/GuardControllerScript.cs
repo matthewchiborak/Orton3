@@ -99,35 +99,11 @@ public class GuardControllerScript : MonoBehaviour {
             {
                 stunTimer = 0;
                 electricSource.Stop();
-                //angleInQuesiton = ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y;
-                //transform.localRotation = Quaternion.Euler(60f, angleInQuesiton, 0);
+                
                 solidBox.enabled = false;
                 guardBody.enabled = false;
                 gunBody.enabled = false;
                 ortonRKOguard.SetActive(true);
-                //transform.position = rkoPoint.position;
-                
-                ////No 1 2 works,  3 and 4 are broken 2 3 6 and 7 wuold be good
-                //if (angleInQuesiton >= 0 && angleInQuesiton < 90)
-                //{
-                //    transform.position = new Vector3(rkoPoint.position.x + (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
-                //}
-                //else if (angleInQuesiton >= 90 && angleInQuesiton < 180)
-                //{
-                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z + (12.874f) * Mathf.Cos(angleInQuesiton));
-                //}
-                //else if (angleInQuesiton >= 180 && angleInQuesiton < 270)
-                //{
-                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
-                //}
-                //else
-                //{
-                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
-                //}
-
-                //transform.position = new Vector3(rkoPoint.position.x + (-12.874f) * Mathf.Cos(ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y), rkoPoint.position.y - 6.8547f, rkoPoint.position.z + (-12.874f) * Mathf.Sin(ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y));
-                // transform.localRotation.Set(40.7f, transform.localRotation.y, transform.localRotation.z, transform.localRotation.w);
-                //transform.localRotation = Quaternion.Euler(60f, ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y, 0);
 
                 if (!ortonPlayerScript.checkIfInAir())
                 {
