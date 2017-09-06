@@ -8,8 +8,9 @@ using System.IO;
 using System.Text;
 
 public class NewStoredInfoScript : MonoBehaviour {
-    
+
     //For shawn
+    public string nameOfScene;
 
     public float currentHealth = 100;
     public float maxHealth = 100;
@@ -370,6 +371,7 @@ public class NewStoredInfoScript : MonoBehaviour {
 
         //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
 
+        SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
         //SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
     }
 

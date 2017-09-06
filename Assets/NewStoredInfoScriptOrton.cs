@@ -10,6 +10,7 @@ using System.Text;
 public class NewStoredInfoScriptOrton : MonoBehaviour {
 
     //For Orton
+    public string nameOfScene;
 
     public float currentHealth = 100;
     public float maxHealth = 100;
@@ -80,12 +81,12 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     {
         Cursor.visible = false;
 
-        string assetText;
+        //string assetText;
 
-        using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
-        {
-            assetText = streamReader.ReadToEnd();
-        }
+        //using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
+        //{
+        //    assetText = streamReader.ReadToEnd();
+        //}
 
         //READ THE SAVE FILE AND SET EVERYTHING IN THE CORRECT POSITIONS
         //progressLevel = Int32.Parse(assetText);
@@ -95,6 +96,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
 
         startVect = new Vector2(1, 1);
         endVect = new Vector2(0, 0);
+
+        showScreen();
     }
 
     public void StartBoss(string name)
@@ -370,7 +373,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
 
         //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
 
-        //SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
     }
 
     public void useHealthPack()
@@ -772,6 +775,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             else
             {
                 GameOverScreen.color = new Color(1, 1, 1, 0);
+                blockScreen();
                 GameOverScreen.enabled = false;
                 death = false;
                 deathTimer = 0;

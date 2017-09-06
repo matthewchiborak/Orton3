@@ -12,6 +12,8 @@ public class CollisionCutsceneTrigger : MonoBehaviour {
 
     public Collider hitbox;
 
+    public Collider[] triggersToEnable;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -25,6 +27,11 @@ public class CollisionCutsceneTrigger : MonoBehaviour {
             else
             {
                 orton.PlayCutscene(cutsceneToTrigger);
+            }
+
+            for(int i = 0; i < triggersToEnable.Length; i++)
+            {
+                triggersToEnable[i].enabled = true;
             }
         }
     }

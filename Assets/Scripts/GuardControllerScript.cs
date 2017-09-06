@@ -15,6 +15,7 @@ public class GuardControllerScript : MonoBehaviour {
 
     //RKO
     public bool beingRKOed;
+    public AudioSource RKOthump;
 
     //Movement speeds
     public float patrolSpeed = 120f;
@@ -117,6 +118,7 @@ public class GuardControllerScript : MonoBehaviour {
                     anim.SetBool("Stunned", false);
                     GetComponentInChildren<Animator>().Play("Armature|Killed", -1, 0f);
                     dead = true;
+                    RKOthump.Play();
                 }
             }
 
