@@ -20,6 +20,21 @@ public enum LevelID
     Arena,
     Sky
 }
+public enum SceneNames
+{
+    Level1,
+    Temple,
+    level2,
+    Level3,
+    Castle,
+    Level4,
+    Sorrow,
+    OrtonBattle,
+    Level5,
+    Level5Interior,
+    Level5Stadium,
+    FinalBoss
+}
 
 public class SaveController : MonoBehaviour {
 

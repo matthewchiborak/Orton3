@@ -12,6 +12,9 @@ public class CheckpointTriggerScript : MonoBehaviour {
 
     public CheckpointTextControl checkpointReachedText;
 
+    public Collider hitbox;
+    public Collider[] triggersToEnable;
+
     // Use this for initialization
     //void Start ()
     //   {
@@ -22,16 +25,22 @@ public class CheckpointTriggerScript : MonoBehaviour {
     //void Update () {
 
     //}
-    
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            hitbox.enabled = false;
             checkpointReachedText.reachedCheckPoint();
 
             string data = ((int)levelID).ToString() + "~" + checkPointID.ToString();
 
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
+
+            for (int i = 0; i < triggersToEnable.Length; i++)
+            {
+                triggersToEnable[i].enabled = true;
+            }
         }
     }
 }
