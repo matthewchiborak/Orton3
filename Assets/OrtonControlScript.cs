@@ -650,6 +650,10 @@ public class OrtonControlScript : MonoBehaviour
     //        }
     //    }
     //}
+    public bool checkIfInAir()
+    {
+        return inAir;
+    }
 
     void OnCollisionStay(Collision a)
     {

@@ -7,6 +7,15 @@ public class GuardControllerScript : MonoBehaviour {
     public bool dead = false;
     private int deathCount = 240;
 
+    public Transform rkoPoint;
+    public BoxCollider solidBox;
+    public Renderer guardBody;
+    public Renderer gunBody;
+    public GameObject ortonRKOguard;
+
+    //RKO
+    public bool beingRKOed;
+
     //Movement speeds
     public float patrolSpeed = 120f;
     public float chaseSpeed = 240f;
@@ -57,6 +66,8 @@ public class GuardControllerScript : MonoBehaviour {
 
     public AudioSource whereYouGo;
 
+    private float angleInQuesiton;
+
     void Awake()
     {
         //player = StoredInfoScript.persistantInfo.getPlayerTransform();
@@ -83,6 +94,56 @@ public class GuardControllerScript : MonoBehaviour {
         }
         else //NOT DEAD
         {
+            //If being RKOed
+            if(beingRKOed)
+            {
+                stunTimer = 0;
+                electricSource.Stop();
+                //angleInQuesiton = ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y;
+                //transform.localRotation = Quaternion.Euler(60f, angleInQuesiton, 0);
+                solidBox.enabled = false;
+                guardBody.enabled = false;
+                gunBody.enabled = false;
+                ortonRKOguard.SetActive(true);
+                //transform.position = rkoPoint.position;
+                
+                ////No 1 2 works,  3 and 4 are broken 2 3 6 and 7 wuold be good
+                //if (angleInQuesiton >= 0 && angleInQuesiton < 90)
+                //{
+                //    transform.position = new Vector3(rkoPoint.position.x + (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
+                //}
+                //else if (angleInQuesiton >= 90 && angleInQuesiton < 180)
+                //{
+                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z + (12.874f) * Mathf.Cos(angleInQuesiton));
+                //}
+                //else if (angleInQuesiton >= 180 && angleInQuesiton < 270)
+                //{
+                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
+                //}
+                //else
+                //{
+                //    transform.position = new Vector3(rkoPoint.position.x - (12.874f) * Mathf.Sin(angleInQuesiton), rkoPoint.position.y - 6.8547f, rkoPoint.position.z - (12.874f) * Mathf.Cos(angleInQuesiton));
+                //}
+
+                //transform.position = new Vector3(rkoPoint.position.x + (-12.874f) * Mathf.Cos(ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y), rkoPoint.position.y - 6.8547f, rkoPoint.position.z + (-12.874f) * Mathf.Sin(ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y));
+                // transform.localRotation.Set(40.7f, transform.localRotation.y, transform.localRotation.z, transform.localRotation.w);
+                //transform.localRotation = Quaternion.Euler(60f, ortonPlayerScript.GetComponent<Transform>().rotation.eulerAngles.y, 0);
+
+                if (!ortonPlayerScript.checkIfInAir())
+                {
+                    //Hit ground, kill guard
+                    transform.position = rkoPoint.position;
+                    ortonRKOguard.SetActive(false);
+                    guardBody.enabled = true;
+                    gunBody.enabled = true;
+                    solidBox.enabled = true;
+                    stunTimer = stunTime;
+                    anim.SetBool("Stunned", false);
+                    GetComponentInChildren<Animator>().Play("Armature|Killed", -1, 0f);
+                    dead = true;
+                }
+            }
+
             if(stunTimer != stunTime)
             {
                 if(!isStunned)

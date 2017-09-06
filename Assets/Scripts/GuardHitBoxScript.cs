@@ -21,18 +21,20 @@ public class GuardHitBoxScript : MonoBehaviour {
     {
         //print("Test");
 
-        if (other.gameObject.CompareTag("PlayerAttack"))
+        if (other.gameObject.CompareTag("PlayerAttack") && !GetComponentInParent<GuardControllerScript>().beingRKOed && !GetComponentInParent<GuardControllerScript>().dead)
         {
-            GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
-            GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
-            GetComponentInParent<GuardControllerScript>().dead = true;
             if (!isForOrton)
             {
                 GetComponentInParent<AudioSource>().clip = sweetChinMusic;
+                GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
+                GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
+                GetComponentInParent<GuardControllerScript>().dead = true;
             }
             else
             {
                 GetComponentInParent<AudioSource>().clip = RKO;
+                GetComponentInParent<GuardControllerScript>().stunTimer = 0;
+                GetComponentInParent<GuardControllerScript>().beingRKOed = true;
             }
             GetComponentInParent<AudioSource>().Play();
         }
