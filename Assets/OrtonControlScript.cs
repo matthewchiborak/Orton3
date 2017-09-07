@@ -346,6 +346,12 @@ public class OrtonControlScript : MonoBehaviour
             onePress = false;
         }
 
+        //Check if reload checkpoint
+        if (storedInfo.checkIfPaused() && Input.GetButtonDown("Reload"))
+        {
+            storedInfo.reloadFromLastCheckpoint();
+        }
+
         if (anim.GetBool("IsCrouching"))
         {
             playerHitBox.center = new Vector3(playerHitBox.center.x, 0.41f, playerHitBox.center.z);

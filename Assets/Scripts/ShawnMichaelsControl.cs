@@ -443,15 +443,21 @@ public class ShawnMichaelsControl : MonoBehaviour {
             rb.velocity = new Vector3(0, 0, 0);
         }
 
-        if (Input.GetButtonDown("Jump") && !onePress)
+        if (Input.GetButtonDown("pause") && !onePress)
         {
             onePress = true;
             storedInfo.MapToggle();
         }
 
-        if(Input.GetButtonUp("Jump"))
+        if(Input.GetButtonUp("pause"))
         {
             onePress = false;
+        }
+
+        //Check if reload checkpoint
+        if(storedInfo.checkIfPaused() && Input.GetButtonDown("Reload"))
+        {
+            storedInfo.reloadFromLastCheckpoint();
         }
 
         if(anim.GetBool("IsCrouching"))

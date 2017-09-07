@@ -391,6 +391,13 @@ public class NewStoredInfoScript : MonoBehaviour {
         //SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
     }
 
+    public void reloadFromLastCheckpoint()
+    {
+        blockScreen();
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
+    }
+
     public void useHealthPack()
     {
         currentHealth += 50;
@@ -572,6 +579,11 @@ public class NewStoredInfoScript : MonoBehaviour {
     //{
     //    return progressLevel;
     //}
+
+    public bool checkIfPaused()
+    {
+        return paused;
+    }
 
     public void blockScreen()
     {

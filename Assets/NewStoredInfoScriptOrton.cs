@@ -729,6 +729,18 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         return false;
     }
 
+    public bool checkIfPaused()
+    {
+        return paused;
+    }
+
+    public void reloadFromLastCheckpoint()
+    {
+        blockScreen();
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
+    }
+
     public void selectItem(int item)
     {
         //Check if the item is enabled
