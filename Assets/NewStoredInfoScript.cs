@@ -88,12 +88,7 @@ public class NewStoredInfoScript : MonoBehaviour {
     {
         Cursor.visible = false;
 
-        string assetText;
-
-        using (var streamReader = new StreamReader("Assets/Resources/Save.txt", Encoding.UTF8))
-        {
-            assetText = streamReader.ReadToEnd();
-        }
+        
 
         //READ THE SAVE FILE AND SET EVERYTHING IN THE CORRECT POSITIONS
         //progressLevel = Int32.Parse(assetText);
@@ -103,6 +98,8 @@ public class NewStoredInfoScript : MonoBehaviour {
 
         startVect = new Vector2(1, 1);
         endVect = new Vector2(0, 0);
+
+        showScreen();
     }
 
     public void StartBoss(string name)
@@ -325,15 +322,16 @@ public class NewStoredInfoScript : MonoBehaviour {
             //Stop time
             Time.timeScale = 0;
 
-            float xAmount = -825 + Mathf.Abs(((325 - (-825)) * (Mathf.Abs(shawnMichaels.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
-            float yAmount = -135 + Mathf.Abs(((385 - (-135)) * (Mathf.Abs(shawnMichaels.transform.position.z - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+            float xAmount = (-825 + borderOffset.x) + ((((325 - borderOffset.x) - ((-825 + borderOffset.x))) * ((shawnMichaels.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            float yAmount = (-135 + borderOffset.y) + ((((385 - borderOffset.y) - ((-135 + borderOffset.y))) * ((shawnMichaels.transform.position.z - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
 
-            playerIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+            //playerIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+            playerIcon.rectTransform.localPosition = new Vector3(xAmount, yAmount, 0);
 
-            xAmount = -825 + Mathf.Abs(((325 - (-825)) * (Mathf.Abs(currentDestination.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
-            yAmount = -135 + Mathf.Abs(((385 - (-135)) * (Mathf.Abs(currentDestination.y - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+            xAmount = (-825 + borderOffset.x) + ((((325 - borderOffset.x) - ((-825 + borderOffset.x))) * ((currentDestination.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            yAmount = (-135 + borderOffset.y) + ((((385 - borderOffset.y) - ((-135 + borderOffset.y))) * ((currentDestination.y - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
 
-            destinationIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+            destinationIcon.rectTransform.localPosition = new Vector3(xAmount, yAmount, 0);
 
             pausedScreen.SetActive(true);
         }
@@ -792,6 +790,7 @@ public class NewStoredInfoScript : MonoBehaviour {
             else
             {
                 GameOverScreen.color = new Color(1, 1, 1, 0);
+                blockScreen();
                 GameOverScreen.enabled = false;
                 death = false;
                 deathTimer = 0;
