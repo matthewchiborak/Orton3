@@ -11,6 +11,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
 
     //For Orton
     public string nameOfScene;
+    
 
     public float currentHealth = 100;
     public float maxHealth = 100;
@@ -76,6 +77,13 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
 
     private Vector2 startVect;
     private Vector2 endVect;
+
+    public Vector2 currentDestination;
+    public Image playerIcon;
+    public Image destinationIcon;
+    public Vector2 levelBoundsMin;
+    public Vector2 levelBoundsMax;
+    public Vector2 borderOffset;
 
     void Start()
     {
@@ -319,6 +327,34 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             paused = true;
             //Stop time
             Time.timeScale = 0;
+
+            //Move the icons to the appropriate location
+            //Map bounds are x: -825 to 325 and y: -135 to 385
+            //float xAmount = (((325f + 825f) / (levelBoundsMax.x + Mathf.Abs(levelBoundsMin.x))) * (orton.transform.position.x + Mathf.Abs(levelBoundsMin.x))) - 825;
+            //float yAmount = (((385f + 135f) / (levelBoundsMax.y + Mathf.Abs(levelBoundsMin.y))) * (orton.transform.position.z + Mathf.Abs(levelBoundsMin.y))) - 135;
+
+            //Debug.Log("Distance in world");
+            //Debug.Log(orton.transform.position.x - levelBoundsMin.x);
+            //Debug.Log("Percentage of world");
+            //Debug.Log((orton.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x));
+            //Debug.Log("Distance on map");
+            //Debug.Log(((orton.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x)) * (325 + 825));
+            //Debug.Log("Location on map");
+            //Debug.Log((((orton.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x)) * (325 + 825)) + -825);
+
+            //float xAmount = -825 + Mathf.Abs(((325 - (-825)) * (Mathf.Abs(orton.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            //float yAmount = -135 + Mathf.Abs(((385 - (-135)) * (Mathf.Abs(orton.transform.position.z - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+            float xAmount = (-825 + borderOffset.x) + ((((325 - borderOffset.x) - ((-825 + borderOffset.x))) * ((orton.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            float yAmount = (-135 + borderOffset.y) + ((((385 - borderOffset.y) - ((-135 + borderOffset.y))) * ((orton.transform.position.z - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+
+            //playerIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+            playerIcon.rectTransform.localPosition = new Vector3(xAmount, yAmount, 0);
+
+            xAmount = (-825 + borderOffset.x) + ((((325 - borderOffset.x) - ((-825 + borderOffset.x))) * ((currentDestination.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            yAmount = (-135 + borderOffset.y) + ((((385 - borderOffset.y) - ((-135 + borderOffset.y))) * ((currentDestination.y - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+
+            destinationIcon.rectTransform.localPosition = new Vector3(xAmount, yAmount, 0);
+
             pausedScreen.SetActive(true);
         }
         else

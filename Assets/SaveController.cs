@@ -61,7 +61,7 @@ public class SaveController : MonoBehaviour {
         //Parse
         //progressLevel = Int32.Parse(assetText);
         parsedLine.AddRange(assetText.Split("~"[0]));
-
+        
         //Set everything to the correct position
         if (int.Parse(parsedLine[0]) == (int)LevelID.Mountain)
         {
@@ -71,11 +71,15 @@ public class SaveController : MonoBehaviour {
         {
             //Orton Level
             orton.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
+            orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[2]);
+            orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[3]);
         }
         else if (int.Parse(parsedLine[0]) > (int)LevelID.Mountain)
         {
             //Shawn level
             shawn.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
+            shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[2]);
+            shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[3]);
         }
 
         //Enable Triggers

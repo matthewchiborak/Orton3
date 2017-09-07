@@ -77,6 +77,13 @@ public class NewStoredInfoScript : MonoBehaviour {
     private Vector2 startVect;
     private Vector2 endVect;
 
+    public Vector2 currentDestination;
+    public Image playerIcon;
+    public Image destinationIcon;
+    public Vector2 levelBoundsMin;
+    public Vector2 levelBoundsMax;
+    public Vector2 borderOffset;
+
     void Start()
     {
         Cursor.visible = false;
@@ -317,6 +324,17 @@ public class NewStoredInfoScript : MonoBehaviour {
             paused = true;
             //Stop time
             Time.timeScale = 0;
+
+            float xAmount = -825 + Mathf.Abs(((325 - (-825)) * (Mathf.Abs(shawnMichaels.transform.position.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            float yAmount = -135 + Mathf.Abs(((385 - (-135)) * (Mathf.Abs(shawnMichaels.transform.position.z - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+
+            playerIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+
+            xAmount = -825 + Mathf.Abs(((325 - (-825)) * (Mathf.Abs(currentDestination.x - levelBoundsMin.x) / (levelBoundsMax.x - levelBoundsMin.x))));
+            yAmount = -135 + Mathf.Abs(((385 - (-135)) * (Mathf.Abs(currentDestination.y - levelBoundsMin.y) / (levelBoundsMax.y - levelBoundsMin.y))));
+
+            destinationIcon.rectTransform.localPosition = new Vector3(xAmount + borderOffset.x, yAmount + borderOffset.y, 0);
+
             pausedScreen.SetActive(true);
         }
         else

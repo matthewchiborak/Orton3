@@ -15,6 +15,9 @@ public class CheckpointTriggerScript : MonoBehaviour {
     public Collider hitbox;
     public Collider[] triggersToEnable;
 
+    public bool changesCurrentDestination;
+    public Vector2 cordsOfDestination;
+
     // Use this for initialization
     //void Start ()
     //   {
@@ -33,9 +36,21 @@ public class CheckpointTriggerScript : MonoBehaviour {
             hitbox.enabled = false;
             checkpointReachedText.reachedCheckPoint();
 
-            string data = ((int)levelID).ToString() + "~" + checkPointID.ToString();
+            string data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
 
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
+
+            if(changesCurrentDestination)
+            {
+                if(other.GetComponentInParent<NewStoredInfoScriptOrton>())
+                {
+                    other.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination = cordsOfDestination;
+                }
+                else
+                {
+                    other.GetComponentInParent<NewStoredInfoScript>().currentDestination = cordsOfDestination;
+                }
+            }
 
             for (int i = 0; i < triggersToEnable.Length; i++)
             {
