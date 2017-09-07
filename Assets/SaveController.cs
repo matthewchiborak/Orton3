@@ -45,6 +45,11 @@ public class SaveController : MonoBehaviour {
     public Collider[] triggersThatCanBeEnabledOnLoad;
     public Vector2[] leftCheckPointRightTriggerToEnable;
 
+    public GameObject[] objectsToEnable;
+    public Vector2[] leftCheckPointRightObjectToEnable;
+    public GameObject[] objectsToDisable;
+    public Vector2[] leftCheckPointRightObjectToDisable;
+
     private List<string> parsedLine;
 
     // Use this for initialization
@@ -71,19 +76,45 @@ public class SaveController : MonoBehaviour {
         {
             //Orton Level
             orton.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
-            orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[2]);
-            orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[3]);
+
+            if (parsedLine.Count > 2)
+            {
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[2]);
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[3]);
+            }
         }
         else if (int.Parse(parsedLine[0]) > (int)LevelID.Mountain)
         {
             //Shawn level
             shawn.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
-            shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[2]);
-            shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[3]);
+
+            if (parsedLine.Count > 2)
+            {
+                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[2]);
+                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[3]);
+            }
+        }
+
+        //Enable Object
+        for (int i = 0; i < leftCheckPointRightObjectToEnable.Length; i++)
+        {
+            if (int.Parse(parsedLine[1]) == leftCheckPointRightObjectToEnable[i].x)
+            {
+                objectsToEnable[(int)leftCheckPointRightObjectToEnable[i].y].SetActive(true);
+            }
+        }
+
+        //Disable Objects
+        for (int i = 0; i < leftCheckPointRightObjectToDisable.Length; i++)
+        {
+            if (int.Parse(parsedLine[1]) == leftCheckPointRightObjectToDisable[i].x)
+            {
+                objectsToDisable[(int)leftCheckPointRightObjectToDisable[i].y].SetActive(false);
+            }
         }
 
         //Enable Triggers
-        for(int i = 0; i < leftCheckPointRightTriggerToEnable.Length; i++)
+        for (int i = 0; i < leftCheckPointRightTriggerToEnable.Length; i++)
         {
             if(int.Parse(parsedLine[1]) == leftCheckPointRightTriggerToEnable[i].x)
             {

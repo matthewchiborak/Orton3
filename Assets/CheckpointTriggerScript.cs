@@ -18,6 +18,9 @@ public class CheckpointTriggerScript : MonoBehaviour {
     public bool changesCurrentDestination;
     public Vector2 cordsOfDestination;
 
+    public GameObject[] objectsToEnable;
+    public GameObject[] objectsToDisable;
+
     // Use this for initialization
     //void Start ()
     //   {
@@ -52,10 +55,20 @@ public class CheckpointTriggerScript : MonoBehaviour {
                 }
             }
 
+            for(int i = 0; i < objectsToEnable.Length; i++)
+            {
+                objectsToEnable[i].SetActive(true);
+            }
+            for (int i = 0; i < objectsToDisable.Length; i++)
+            {
+                objectsToDisable[i].SetActive(false);
+            }
+
             for (int i = 0; i < triggersToEnable.Length; i++)
             {
                 triggersToEnable[i].enabled = true;
             }
+
         }
     }
 }
