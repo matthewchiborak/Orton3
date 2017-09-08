@@ -39,6 +39,19 @@ public class GuardHitBoxScript : MonoBehaviour {
             GetComponentInParent<AudioSource>().Play();
         }
 
+        //Cena4
+        if (other.gameObject.CompareTag("C4Explosion"))
+        {
+            GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
+            GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
+            GetComponentInParent<GuardControllerScript>().dead = true;
+        }
+
+        if (other.gameObject.CompareTag("Cena4"))
+        {
+            other.gameObject.GetComponent<MineProximityScript>().setOff();
+        }
+
         if (other.gameObject.CompareTag("Socko"))
         {
             GetComponentInParent<GuardControllerScript>().sockoDropTimer = 0f;

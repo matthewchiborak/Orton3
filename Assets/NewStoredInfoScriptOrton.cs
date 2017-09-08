@@ -32,6 +32,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     private int pillsAmount = 2;
     private int beerAmount = 3;
     private int maxItems = 6;
+    private int c4Amount = 2;
 
     //For block out screen when load new area
     public Image loadScreen;
@@ -622,7 +623,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             abilityEnabled[2] = true;
             abilityEnabled[3] = true;
             abilityEnabled[4] = true;
-            abilityEnabled[5] = false;
+            //Temporary
+            abilityEnabled[5] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString();
@@ -679,6 +681,19 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
                 itemAmount.text = beerAmount.ToString();
             }
         }
+        if(itemId == 5)
+        {
+            if (c4Amount >= maxItems)
+            {
+                return;
+            }
+
+            c4Amount++;
+            if (itemSelected == 5)
+            {
+                itemAmount.text = c4Amount.ToString();
+            }
+        }
     }
 
     public bool checkIfEnough()
@@ -718,6 +733,15 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             {
                 beerAmount--;
                 itemAmount.text = beerAmount.ToString();
+                return true;
+            }
+        }
+        else if (itemNo == 5)
+        {
+            if (c4Amount > 0)
+            {
+                c4Amount--;
+                itemAmount.text = c4Amount.ToString();
                 return true;
             }
         }
@@ -767,6 +791,10 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         else if (item == 4)
         {
             itemAmount.text = beerAmount.ToString();
+        }
+        else if (item == 5)
+        {
+            itemAmount.text = c4Amount.ToString();
         }
         else
         {
