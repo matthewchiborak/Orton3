@@ -31,6 +31,7 @@ public class NewStoredInfoScript : MonoBehaviour {
     private int pillsAmount = 2;
     private int beerAmount = 3;
     private int maxItems = 6;
+    private int c4Amount = 2;
 
     //For block out screen when load new area
     public Image loadScreen;
@@ -670,6 +671,19 @@ public class NewStoredInfoScript : MonoBehaviour {
                 itemAmount.text = beerAmount.ToString();
             }
         }
+        if (itemId == 5)
+        {
+            if (c4Amount >= maxItems)
+            {
+                return;
+            }
+            
+            c4Amount++;
+            if (itemSelected == 5)
+            {
+                itemAmount.text = c4Amount.ToString();
+            }
+        }
     }
 
     public bool checkIfEnough()
@@ -712,6 +726,15 @@ public class NewStoredInfoScript : MonoBehaviour {
                 return true;
             }
         }
+        else if (itemNo == 5)
+        {
+            if (c4Amount > 0)
+            {
+                c4Amount--;
+                itemAmount.text = c4Amount.ToString();
+                return true;
+            }
+        }
         else
         {
             return true;
@@ -746,6 +769,10 @@ public class NewStoredInfoScript : MonoBehaviour {
         else if (item == 4)
         {
             itemAmount.text = beerAmount.ToString();
+        }
+        else if (item == 5)
+        {
+            itemAmount.text = c4Amount.ToString();
         }
         else
         {

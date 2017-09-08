@@ -69,6 +69,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
     public GameObject bolt;
     public GameObject usedCan;
 
+    public GameObject cena4;
+
     private bool invisibleOn = false;
     public GameObject bodyModel;
     private float CMETimer = -1f;
@@ -203,12 +205,16 @@ public class ShawnMichaelsControl : MonoBehaviour {
         else if (storedInfo.itemSelected == 5)
         {
             if (isHuman)
-                anim.Play("Armature|UCantCMe", -1, 0f);
+                anim.Play("Armature|Putdown", -1, 0f);
             else
-                anim2.Play("Armature|UCantCMe", -1, 0f);
+                anim2.Play("Armature|Putdown", -1, 0f);
             controlsEnabled = false;
-            cooldown = 180;
-            CMETimer = 3f;
+            cooldown = 60;
+            GameObject tempCan = Instantiate(cena4, new Vector3((float)(transform.position.x), (float)(transform.position.y), (float)(transform.position.z)), transform.rotation);
+        }
+        else if(storedInfo.itemSelected == 6)
+        {
+
         }
     }
 
