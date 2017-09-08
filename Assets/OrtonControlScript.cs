@@ -83,6 +83,11 @@ public class OrtonControlScript : MonoBehaviour
 
     public BoxCollider playerHitBox;
 
+    public GameObject rocketLauncher;
+    public GameObject launchedCan;
+    public GameObject launchArrow;
+    public float canLaunchVelo;
+
 
     // Use this for initialization
     void Start()
@@ -172,7 +177,25 @@ public class OrtonControlScript : MonoBehaviour
         }
         else if (storedInfo.itemSelected == 6)
         {
-
+            //Can rocket
+            controlsEnabled = false;
+            cooldown = 60;
+            rocketLauncher.SetActive(true);
+            anim.Play("Armature|Shoot", -1, 0f);
+            GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
+            tempCan.GetComponent<CanControlScript>().isForOrton = true;
+            tempCan.GetComponent<CanControlScript>().storedOrton = storedInfo;
+            tempCan.GetComponent<CanControlScript>().isReady = true;
+            //tempCan.GetComponent<Rigidbody>().velocity = transform.forward * canLaunchVelo;
+            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3((Mathf.Cos(transform.rotation.y * Mathf.Deg2Rad) * canLaunchVelo), 
+            //    canLaunchVelo,
+            //    (Mathf.Sin(transform.rotation.y * Mathf.Deg2Rad) * canLaunchVelo)
+            //    ), ForceMode.Impulse);
+            Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+            tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+            //Debug.Log(transform.rotation.eulerAngles.y);
+            //Debug.Log(Mathf.Cos(transform.rotation.eulerAngles.y * (3.1415f / 180f)));
+            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(Mathf.Cos(transform.rotation.eulerAngles.y * (3.1415f/180f)) * canLaunchVelo, canLaunchVelo, Mathf.Sin(transform.rotation.eulerAngles.y * (3.1415f / 180f)) * canLaunchVelo), ForceMode.Impulse);
         }
         //else if (storedInfo.itemSelected == 10)
         //{
@@ -188,26 +211,37 @@ public class OrtonControlScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1))
         {
             storedInfo.selectItem(0);
+            launchArrow.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha2))
         {
             storedInfo.selectItem(1);
+            launchArrow.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha3))
         {
             storedInfo.selectItem(2);
+            launchArrow.SetActive(true);
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
             storedInfo.selectItem(3);
+            launchArrow.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha5))
         {
             storedInfo.selectItem(4);
+            launchArrow.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha6))
         {
             storedInfo.selectItem(5);
+            launchArrow.SetActive(false);
+        }
+        else if (Input.GetKey(KeyCode.Alpha7))
+        {
+            storedInfo.selectItem(6);
+            launchArrow.SetActive(true);
         }
     }
 
@@ -442,6 +476,8 @@ public class OrtonControlScript : MonoBehaviour
 
         if (cooldown <= 0 && !inAir)
         {
+            rocketLauncher.SetActive(false);
+
             if (!inAir && Input.GetButtonDown("Fire1") && !anim.GetBool("IsCrouching"))
             {
                 //sweetChinHitbox.enabled = true;

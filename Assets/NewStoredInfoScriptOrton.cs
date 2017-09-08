@@ -23,7 +23,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public OrtonControlScript ortonScript;
     public Animator ortonAnim;
 
-    private bool[] abilityEnabled = new bool[6];
+    private bool[] abilityEnabled = new bool[7];
 
     public Material[] itemMaterials = new Material[7];
     public Image itemImage;
@@ -625,6 +625,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             abilityEnabled[4] = true;
             //Temporary
             abilityEnabled[5] = true;
+            abilityEnabled[6] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString();
@@ -745,6 +746,15 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
                 return true;
             }
         }
+        else if (itemNo == 6)
+        {
+            if (beerAmount > 0)
+            {
+                beerAmount--;
+                itemAmount.text = beerAmount.ToString();
+                return true;
+            }
+        }
         else
         {
             return true;
@@ -795,6 +805,10 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         else if (item == 5)
         {
             itemAmount.text = c4Amount.ToString();
+        }
+        else if (item == 6)
+        {
+            itemAmount.text = beerAmount.ToString();
         }
         else
         {

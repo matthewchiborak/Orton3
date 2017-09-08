@@ -36,6 +36,13 @@ public class CollideWithPickup : MonoBehaviour {
                 itemSource.clip = pickupSFX;
                 itemSource.Play();
             }
+            if (other.gameObject.CompareTag("MinePickup"))
+            {
+                storedInfoOrton.pickupItem(5);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
         }
         else
         {
@@ -56,6 +63,13 @@ public class CollideWithPickup : MonoBehaviour {
             if (other.gameObject.CompareTag("BeerPickup"))
             {
                 storedInfoShawn.pickupItem(4);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
+            if (other.gameObject.CompareTag("MinePickup"))
+            {
+                storedInfoShawn.pickupItem(5);
                 Destroy(other.gameObject);
                 itemSource.clip = pickupSFX;
                 itemSource.Play();

@@ -65,6 +65,10 @@ public class GuardControllerScript : MonoBehaviour {
     public GameObject can;
     public AudioSource dropSource;
 
+    public GameObject mine;
+    public bool canDropMines;
+    public bool canDropAmmo;
+
     public AudioSource whereYouGo;
 
     private float angleInQuesiton;
@@ -164,6 +168,16 @@ public class GuardControllerScript : MonoBehaviour {
                             {
                                 dropSource.Play();
                                 Instantiate(can, new Vector3((float)(transform.position.x), (float)(transform.position.y + 30f), (float)(transform.position.z)), transform.rotation);
+                            }
+                            else if (randomValue == 3 && canDropMines)
+                            {
+                                dropSource.Play();
+                                Instantiate(mine, new Vector3((float)(transform.position.x), (float)(transform.position.y + 5f), (float)(transform.position.z)), transform.rotation);
+                            }
+                            else if (randomValue == 4 && canDropAmmo)
+                            {
+                                //dropSource.Play();
+                                //Instantiate(can, new Vector3((float)(transform.position.x), (float)(transform.position.y + 30f), (float)(transform.position.z)), transform.rotation);
                             }
                         }
                     }

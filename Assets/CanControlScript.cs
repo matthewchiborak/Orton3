@@ -45,12 +45,12 @@ public class CanControlScript : MonoBehaviour {
             if (isForOrton)
             {
                 storedOrton.ignorePlayer = true;
-                storedOrton.lastPosition = position;
+                storedOrton.lastPosition = GetComponent<Transform>().position;//position;
             }
             else
             {
                 storedShawn.ignorePlayer = true;
-                storedShawn.lastPosition = position;
+                storedShawn.lastPosition = GetComponent<Transform>().position;// position;
             }
         }
 
