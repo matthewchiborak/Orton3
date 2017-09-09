@@ -88,6 +88,9 @@ public class OrtonControlScript : MonoBehaviour
     public GameObject launchArrow;
     public float canLaunchVelo;
 
+    private bool isFiring;
+    private bool hasFired;
+
 
     // Use this for initialization
     void Start()
@@ -182,17 +185,17 @@ public class OrtonControlScript : MonoBehaviour
             cooldown = 60;
             rocketLauncher.SetActive(true);
             anim.Play("Armature|Shoot", -1, 0f);
-            GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
-            tempCan.GetComponent<CanControlScript>().isForOrton = true;
-            tempCan.GetComponent<CanControlScript>().storedOrton = storedInfo;
-            tempCan.GetComponent<CanControlScript>().isReady = true;
-            //tempCan.GetComponent<Rigidbody>().velocity = transform.forward * canLaunchVelo;
-            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3((Mathf.Cos(transform.rotation.y * Mathf.Deg2Rad) * canLaunchVelo), 
-            //    canLaunchVelo,
-            //    (Mathf.Sin(transform.rotation.y * Mathf.Deg2Rad) * canLaunchVelo)
-            //    ), ForceMode.Impulse);
-            Vector3 normalIzedForward = tempCan.transform.forward.normalized;
-            tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+
+            hasFired = false;
+            isFiring = true;
+
+            //GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
+            //tempCan.GetComponent<CanControlScript>().isForOrton = true;
+            //tempCan.GetComponent<CanControlScript>().storedOrton = storedInfo;
+            //tempCan.GetComponent<CanControlScript>().isReady = true;
+
+            //Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
             //Debug.Log(transform.rotation.eulerAngles.y);
             //Debug.Log(Mathf.Cos(transform.rotation.eulerAngles.y * (3.1415f / 180f)));
             //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(Mathf.Cos(transform.rotation.eulerAngles.y * (3.1415f/180f)) * canLaunchVelo, canLaunchVelo, Mathf.Sin(transform.rotation.eulerAngles.y * (3.1415f / 180f)) * canLaunchVelo), ForceMode.Impulse);
@@ -381,6 +384,20 @@ public class OrtonControlScript : MonoBehaviour
         {
             //transform.position = storedInfo.lastLoadLocation;
             rb.velocity = new Vector3(0, 0, 0);
+        }
+
+        if (isFiring && !hasFired && cooldown < 30)
+        {
+            GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
+            tempCan.GetComponent<CanControlScript>().isForOrton = true;
+            tempCan.GetComponent<CanControlScript>().storedOrton = storedInfo;
+            tempCan.GetComponent<CanControlScript>().isReady = true;
+
+            Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+            tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+
+            hasFired = true;
+            isFiring = false;
         }
 
         if (Input.GetButtonDown("pause") && !onePress)

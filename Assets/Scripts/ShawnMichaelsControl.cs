@@ -71,6 +71,13 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     public GameObject cena4;
 
+    public GameObject rocketLauncher;
+    public GameObject launchedCan;
+    public GameObject launchArrow;
+    public float canLaunchVelo;
+    public AudioSource bringOutGun;
+    public AudioSource putAwayGun;
+
     private bool invisibleOn = false;
     public GameObject bodyModel;
     private float CMETimer = -1f;
@@ -83,7 +90,15 @@ public class ShawnMichaelsControl : MonoBehaviour {
     private bool onePress = false;
 
     public BoxCollider playerHitBox;
-   
+
+    private bool growingGun;
+    private bool shrikingGun;
+    public float durationOfGunGrowth;
+    private float timeGrowthBegan;
+    private Vector3 growGoal;
+
+    private bool isFiring;
+    private bool hasFired;
 
     // Use this for initialization
     void Start ()
@@ -214,7 +229,19 @@ public class ShawnMichaelsControl : MonoBehaviour {
         }
         else if(storedInfo.itemSelected == 6)
         {
+            controlsEnabled = false;
+            cooldown = 60;
+            anim.Play("Armature|Shoot", -1, 0f);
 
+            hasFired = false;
+            isFiring = true;
+            //GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
+            //tempCan.GetComponent<CanControlScript>().isForOrton = false;
+            //tempCan.GetComponent<CanControlScript>().storedShawn = storedInfo;
+            //tempCan.GetComponent<CanControlScript>().isReady = true;
+            //Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+            
         }
     }
 
@@ -223,26 +250,86 @@ public class ShawnMichaelsControl : MonoBehaviour {
         if(Input.GetKey(KeyCode.Alpha1))
         {
             storedInfo.selectItem(0);
+            launchArrow.SetActive(false);
+            if(rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha2))
         {
             storedInfo.selectItem(1);
+            launchArrow.SetActive(false);
+            if (rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha3))
         {
             storedInfo.selectItem(2);
+            launchArrow.SetActive(true);
+            if (rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
             storedInfo.selectItem(3);
+            launchArrow.SetActive(false);
+            if (rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha5))
         {
             storedInfo.selectItem(4);
+            launchArrow.SetActive(false);
+            if (rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha6))
         {
             storedInfo.selectItem(5);
+            launchArrow.SetActive(false);
+            if (rocketLauncher.active)
+            {
+                putAwayGun.Play();
+                shrikingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            //rocketLauncher.SetActive(false);
+        }
+        else if (Input.GetKey(KeyCode.Alpha7))
+        {
+            storedInfo.selectItem(6);
+            launchArrow.SetActive(true);
+            if (!rocketLauncher.active)
+            {
+                bringOutGun.Play();
+                growingGun = true;
+                timeGrowthBegan = Time.time;
+            }
+            rocketLauncher.SetActive(true);
         }
     }
 
@@ -447,6 +534,55 @@ public class ShawnMichaelsControl : MonoBehaviour {
         {
             //transform.position = storedInfo.lastLoadLocation;
             rb.velocity = new Vector3(0, 0, 0);
+        }
+
+        if(growingGun)
+        {
+            growGoal.x = Mathf.Lerp(0, 0.001062367f, (Time.time - timeGrowthBegan) / (durationOfGunGrowth));
+            growGoal.y = Mathf.Lerp(0, 0.001062367f, (Time.time - timeGrowthBegan) / (durationOfGunGrowth/3));
+            growGoal.z = Mathf.Lerp(0, 0.001062367f, (Time.time - timeGrowthBegan) / (durationOfGunGrowth / 3));
+
+            rocketLauncher.transform.localScale = growGoal;
+            //rocketLauncher.transform.localScale = Vector3.Lerp(new Vector3(0, 0.001062367f, 0.001062367f), new Vector3(0.001062367f, 0.001062367f, 0.001062367f), (Time.time - timeGrowthBegan) / durationOfGunGrowth);
+            if ((Time.time - timeGrowthBegan) > durationOfGunGrowth)
+            {
+                growingGun = false;
+            }
+        }
+        if (shrikingGun)
+        {
+            growGoal.x = Mathf.Lerp(0.001062367f, 0, (Time.time - timeGrowthBegan) / (durationOfGunGrowth));
+            if((Time.time - timeGrowthBegan) < (durationOfGunGrowth / 3))
+            {
+                growGoal.y = 0.001062367f;
+                growGoal.z = 0.001062367f;
+            }
+            else
+            {
+                growGoal.y = Mathf.Lerp(0.001062367f, 0, (Time.time - timeGrowthBegan - (durationOfGunGrowth / 3)) / (durationOfGunGrowth / 3));
+                growGoal.z = Mathf.Lerp(0.001062367f, 0, (Time.time - timeGrowthBegan - (durationOfGunGrowth / 3)) / (durationOfGunGrowth / 3));
+            }
+
+            rocketLauncher.transform.localScale = growGoal;
+            //rocketLauncher.transform.localScale = Vector3.Lerp(new Vector3(0.001062367f, 0.001062367f, 0.001062367f), new Vector3(0, 0.001062367f, 0.001062367f), (Time.time - timeGrowthBegan) / durationOfGunGrowth);
+            if ((Time.time - timeGrowthBegan) > durationOfGunGrowth)
+            {
+                shrikingGun = false;
+                rocketLauncher.SetActive(false);
+            }
+        }
+
+        if(isFiring && !hasFired && cooldown < 30)
+        {
+            GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
+            tempCan.GetComponent<CanControlScript>().isForOrton = false;
+            tempCan.GetComponent<CanControlScript>().storedShawn = storedInfo;
+            tempCan.GetComponent<CanControlScript>().isReady = true;
+            Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+            tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+
+            hasFired = true;
+            isFiring = false;
         }
 
         if (Input.GetButtonDown("pause") && !onePress)

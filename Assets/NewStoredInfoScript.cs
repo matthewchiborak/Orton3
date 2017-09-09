@@ -22,9 +22,9 @@ public class NewStoredInfoScript : MonoBehaviour {
     public ShawnMichaelsControl shawnMichaelsScript;
     public Animator shawnMichaelsAnim;
 
-    private bool[] abilityEnabled = new bool[6];
+    private bool[] abilityEnabled = new bool[9];
 
-    public Material[] itemMaterials = new Material[7];
+    public Material[] itemMaterials = new Material[9];
     public Image itemImage;
     public Text itemAmount;
     private int bandageAmount = 2;
@@ -615,6 +615,7 @@ public class NewStoredInfoScript : MonoBehaviour {
             abilityEnabled[3] = true;
             abilityEnabled[4] = true;
             abilityEnabled[5] = true;
+            abilityEnabled[6] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString();
@@ -735,6 +736,15 @@ public class NewStoredInfoScript : MonoBehaviour {
                 return true;
             }
         }
+        else if (itemNo == 6)
+        {
+            if (beerAmount > 0)
+            {
+                beerAmount--;
+                itemAmount.text = beerAmount.ToString();
+                return true;
+            }
+        }
         else
         {
             return true;
@@ -773,6 +783,10 @@ public class NewStoredInfoScript : MonoBehaviour {
         else if (item == 5)
         {
             itemAmount.text = c4Amount.ToString();
+        }
+        else if (item == 6)
+        {
+            itemAmount.text = beerAmount.ToString();
         }
         else
         {
