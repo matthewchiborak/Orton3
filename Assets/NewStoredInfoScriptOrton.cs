@@ -87,6 +87,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public Vector2 levelBoundsMax;
     public Vector2 borderOffset;
 
+    
+
     void Start()
     {
         Cursor.visible = false;

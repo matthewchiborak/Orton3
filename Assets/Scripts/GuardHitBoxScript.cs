@@ -8,6 +8,10 @@ public class GuardHitBoxScript : MonoBehaviour {
     public AudioClip RKO;
 
     public AudioClip hitByBall;
+    public AudioClip[] hitByLava;
+
+    public AudioSource screamSource;
+    public AudioSource altSource;
 
 	// Use this for initialization
 	//void Start () {
@@ -60,6 +64,21 @@ public class GuardHitBoxScript : MonoBehaviour {
             GetComponentInParent<AudioSource>().Play();
 
             Destroy(other.gameObject);
+        }
+
+        //Lava
+        if (other.gameObject.CompareTag("LavaShot") && !GetComponentInParent<GuardControllerScript>().dead)
+        {
+            GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
+            GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
+            GetComponentInParent<GuardControllerScript>().dead = true;
+            
+            screamSource.clip = hitByLava[Random.Range(0, hitByLava.Length)];
+            screamSource.Play();
+
+            altSource.clip = sweetChinMusic;
+            //GetComponentInParent<AudioSource>().clip = hitByLava[Random.Range(0, hitByLava.Length)];
+            altSource.Play();
         }
 
         if (other.gameObject.CompareTag("Cena4"))

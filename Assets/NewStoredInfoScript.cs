@@ -88,6 +88,9 @@ public class NewStoredInfoScript : MonoBehaviour {
     public Vector2 levelBoundsMax;
     public Vector2 borderOffset;
 
+    public GameObject boot1;
+    public GameObject boot2;
+
     private bool firedShot;
 
     void Start()
@@ -622,6 +625,19 @@ public class NewStoredInfoScript : MonoBehaviour {
             abilityEnabled[5] = true;
             abilityEnabled[6] = true;
             abilityEnabled[7] = true;
+            abilityEnabled[8] = true;
+
+            if(abilityEnabled[8])
+            {
+                boot1.SetActive(true);
+                boot2.SetActive(true);
+            }
+            else
+            {
+                boot1.SetActive(false);
+                boot2.SetActive(false);
+            }
+
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
@@ -636,6 +652,10 @@ public class NewStoredInfoScript : MonoBehaviour {
     public void enableItem(int itemNumber)
     {
         abilityEnabled[itemNumber] = true;
+    }
+    public bool checkIfItemEnabled(int itemNumber)
+    {
+        return abilityEnabled[itemNumber];
     }
     
     public void pickupItem(int itemId)

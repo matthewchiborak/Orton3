@@ -62,6 +62,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     public BoxCollider sweetChinHitbox;
     public BoxCollider cyborgChitHitbox;
+    
+    public GameObject bootsFire;
 
     public AudioSource stompSource;
 
@@ -104,6 +106,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
     private bool hasFired;
     public Transform launchPoint;
     private int launchID;
+    private bool activateFire;
 
     // Use this for initialization
     void Start ()
@@ -629,6 +632,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
         {
             storedInfo.setFiredShot(false);
         }
+        if(activateFire && cooldown < 30)
+        {
+            Instantiate(bootsFire, sweetChinHitbox.transform.position, Quaternion.Euler(0, transform.rotation.eulerAngles.y - 90, 0));
+            activateFire = false;
+        }
 
         if (Input.GetButtonDown("pause") && !onePress)
         {
@@ -747,6 +755,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
                     itemSource.clip = kickSwish;
                     itemSource.Play();
                     cooldown = 60;
+
+                    if(storedInfo.checkIfItemEnabled(8))
+                    {
+                        activateFire = true;
+                    }
                 }
                 else
                 {
@@ -811,6 +824,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
             if (isHuman)
             {
                 sweetChinHitbox.enabled = false;
+
+                
             }
             else
             {
