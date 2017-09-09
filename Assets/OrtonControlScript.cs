@@ -211,6 +211,11 @@ public class OrtonControlScript : MonoBehaviour
 
     void selectItem()
     {
+        if(sockoing)
+        {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.Alpha1))
         {
             storedInfo.selectItem(0);

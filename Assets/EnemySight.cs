@@ -178,6 +178,26 @@ public class EnemySight : MonoBehaviour {
                 //StoredInfoScript.persistantInfo.lastPosition = tempVector;
                 storedInfoShawn.lastPosition = player.transform.position;
             }
+            else if(!isForOrton && !storedInfoShawn.ignorePlayer)
+            {
+                if(storedInfoShawn.getFiredShot())
+                {
+                    if (!anim.GetBool("PlayerInSight"))
+                    {
+                        mark.SetActive(true);
+
+                        markTimer = timeForMark;
+                        alertSource.Play();
+                    }
+
+                    playerInSight = true;
+                    anim.SetBool("PlayerInSight", true);
+                    //alertSource.Play();
+                    //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
+                    //StoredInfoScript.persistantInfo.lastPosition = tempVector;
+                    storedInfoShawn.lastPosition = player.transform.position;
+                }
+            }
         }
     }
 }

@@ -74,6 +74,13 @@ public class CollideWithPickup : MonoBehaviour {
                 itemSource.clip = pickupSFX;
                 itemSource.Play();
             }
+            if (other.gameObject.CompareTag("CannonballPickup"))
+            {
+                storedInfoShawn.pickupItem(7);
+                Destroy(other.gameObject);
+                itemSource.clip = pickupSFX;
+                itemSource.Play();
+            }
         }
     }
 }

@@ -32,6 +32,8 @@ public class NewStoredInfoScript : MonoBehaviour {
     private int beerAmount = 3;
     private int maxItems = 6;
     private int c4Amount = 2;
+    private int cannonBallAmount = 8;
+    private int maxBalls = 16;
 
     //For block out screen when load new area
     public Image loadScreen;
@@ -84,6 +86,8 @@ public class NewStoredInfoScript : MonoBehaviour {
     public Vector2 levelBoundsMin;
     public Vector2 levelBoundsMax;
     public Vector2 borderOffset;
+
+    private bool firedShot;
 
     void Start()
     {
@@ -616,6 +620,7 @@ public class NewStoredInfoScript : MonoBehaviour {
             abilityEnabled[4] = true;
             abilityEnabled[5] = true;
             abilityEnabled[6] = true;
+            abilityEnabled[7] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString();
@@ -685,6 +690,19 @@ public class NewStoredInfoScript : MonoBehaviour {
                 itemAmount.text = c4Amount.ToString();
             }
         }
+        if (itemId == 7)
+        {
+            if (cannonBallAmount >= maxBalls)
+            {
+                return;
+            }
+
+            cannonBallAmount += 4;
+            if (itemSelected == 7)
+            {
+                itemAmount.text = cannonBallAmount.ToString();
+            }
+        }
     }
 
     public bool checkIfEnough()
@@ -745,6 +763,15 @@ public class NewStoredInfoScript : MonoBehaviour {
                 return true;
             }
         }
+        else if (itemNo == 7)
+        {
+            if (cannonBallAmount > 0)
+            {
+                cannonBallAmount--;
+                itemAmount.text = cannonBallAmount.ToString();
+                return true;
+            }
+        }
         else
         {
             return true;
@@ -788,6 +815,10 @@ public class NewStoredInfoScript : MonoBehaviour {
         {
             itemAmount.text = beerAmount.ToString();
         }
+        else if (item == 7)
+        {
+            itemAmount.text = cannonBallAmount.ToString();
+        }
         else
         {
             itemAmount.text = "";
@@ -798,6 +829,14 @@ public class NewStoredInfoScript : MonoBehaviour {
     //   void Start () {
 
     //}
+    public void setFiredShot(bool status)
+    {
+        firedShot = status;
+    }
+    public bool getFiredShot()
+    {
+        return firedShot;
+    }
 
 
 

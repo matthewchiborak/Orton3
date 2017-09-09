@@ -73,6 +73,9 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     public GameObject rocketLauncher;
     public GameObject launchedCan;
+
+    public GameObject cannonball;
+
     public GameObject launchArrow;
     public float canLaunchVelo;
     public AudioSource bringOutGun;
@@ -99,6 +102,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     private bool isFiring;
     private bool hasFired;
+    public Transform launchPoint;
+    private int launchID;
 
     // Use this for initialization
     void Start ()
@@ -233,25 +238,34 @@ public class ShawnMichaelsControl : MonoBehaviour {
             cooldown = 60;
             anim.Play("Armature|Shoot", -1, 0f);
 
+            launchID = 0;
             hasFired = false;
             isFiring = true;
-            //GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
-            //tempCan.GetComponent<CanControlScript>().isForOrton = false;
-            //tempCan.GetComponent<CanControlScript>().storedShawn = storedInfo;
-            //tempCan.GetComponent<CanControlScript>().isReady = true;
-            //Vector3 normalIzedForward = tempCan.transform.forward.normalized;
-            //tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
-            
+        }
+        else if (storedInfo.itemSelected == 7)
+        {
+            controlsEnabled = false;
+            cooldown = 60;
+            anim.Play("Armature|Shoot", -1, 0f);
+
+            launchID = 1;
+            hasFired = false;
+            isFiring = true;
         }
     }
 
     void selectItem()
     {
-        if(Input.GetKey(KeyCode.Alpha1))
+        if(sockoing)
+        {
+            return;
+        }
+
+        if(Input.GetKey(KeyCode.Alpha1) && !growingGun)
         {
             storedInfo.selectItem(0);
             launchArrow.SetActive(false);
-            if(rocketLauncher.active)
+            if(rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -259,11 +273,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha2))
+        else if (Input.GetKey(KeyCode.Alpha2) && !growingGun)
         {
             storedInfo.selectItem(1);
             launchArrow.SetActive(false);
-            if (rocketLauncher.active)
+            if (rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -271,11 +285,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha3))
+        else if (Input.GetKey(KeyCode.Alpha3) && !growingGun)
         {
             storedInfo.selectItem(2);
             launchArrow.SetActive(true);
-            if (rocketLauncher.active)
+            if (rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -283,11 +297,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha4))
+        else if (Input.GetKey(KeyCode.Alpha4) && !growingGun)
         {
             storedInfo.selectItem(3);
             launchArrow.SetActive(false);
-            if (rocketLauncher.active)
+            if (rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -295,11 +309,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha5))
+        else if (Input.GetKey(KeyCode.Alpha5) && !growingGun)
         {
             storedInfo.selectItem(4);
             launchArrow.SetActive(false);
-            if (rocketLauncher.active)
+            if (rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -307,11 +321,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha6))
+        else if (Input.GetKey(KeyCode.Alpha6) && !growingGun)
         {
             storedInfo.selectItem(5);
             launchArrow.SetActive(false);
-            if (rocketLauncher.active)
+            if (rocketLauncher.active && !shrikingGun)
             {
                 putAwayGun.Play();
                 shrikingGun = true;
@@ -321,15 +335,33 @@ public class ShawnMichaelsControl : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.Alpha7))
         {
-            storedInfo.selectItem(6);
-            launchArrow.SetActive(true);
-            if (!rocketLauncher.active)
+            if (!shrikingGun)
             {
-                bringOutGun.Play();
-                growingGun = true;
-                timeGrowthBegan = Time.time;
+                storedInfo.selectItem(6);
+                launchArrow.SetActive(true);
+                if (!rocketLauncher.active)
+                {
+                    bringOutGun.Play();
+                    growingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                rocketLauncher.SetActive(true);
             }
-            rocketLauncher.SetActive(true);
+        }
+        else if (Input.GetKey(KeyCode.Alpha8))
+        {
+            if (!shrikingGun)
+            {
+                storedInfo.selectItem(7);
+                launchArrow.SetActive(true);
+                if (!rocketLauncher.active)
+                {
+                    bringOutGun.Play();
+                    growingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                rocketLauncher.SetActive(true);
+            }
         }
     }
 
@@ -574,15 +606,28 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
         if(isFiring && !hasFired && cooldown < 30)
         {
-            GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 2), (float)(transform.position.y + 12), (float)(transform.position.z)), transform.rotation);
-            tempCan.GetComponent<CanControlScript>().isForOrton = false;
-            tempCan.GetComponent<CanControlScript>().storedShawn = storedInfo;
-            tempCan.GetComponent<CanControlScript>().isReady = true;
-            Vector3 normalIzedForward = tempCan.transform.forward.normalized;
-            tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
-
+            //GameObject tempCan = Instantiate(launchedCan, new Vector3((float)(transform.position.x + 6), (float)(transform.position.y + 13), (float)(transform.position.z - 1)), transform.rotation);
+            if(launchID == 0)
+            {
+                GameObject tempCan = Instantiate(launchedCan, launchPoint.transform.position, transform.rotation);
+                tempCan.GetComponent<CanControlScript>().isForOrton = false;
+                tempCan.GetComponent<CanControlScript>().storedShawn = storedInfo;
+                tempCan.GetComponent<CanControlScript>().isReady = true;
+                Vector3 normalIzedForward = tempCan.transform.forward.normalized;
+                tempCan.GetComponent<Rigidbody>().AddForce(new Vector3(normalIzedForward.x * canLaunchVelo, canLaunchVelo, normalIzedForward.z * canLaunchVelo), ForceMode.Impulse);
+            }
+            else if(launchID == 1)
+            {
+                GameObject tempCan = Instantiate(cannonball, launchPoint.transform.position, transform.rotation);
+                storedInfo.setFiredShot(true);
+            }
+            
             hasFired = true;
             isFiring = false;
+        }
+        if(cooldown <= 0)
+        {
+            storedInfo.setFiredShot(false);
         }
 
         if (Input.GetButtonDown("pause") && !onePress)

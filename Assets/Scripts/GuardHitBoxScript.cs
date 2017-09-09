@@ -5,7 +5,9 @@ public class GuardHitBoxScript : MonoBehaviour {
 
     public bool isForOrton;
     public AudioClip sweetChinMusic;
-    public AudioClip RKO; 
+    public AudioClip RKO;
+
+    public AudioClip hitByBall;
 
 	// Use this for initialization
 	//void Start () {
@@ -45,6 +47,19 @@ public class GuardHitBoxScript : MonoBehaviour {
             GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
             GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
             GetComponentInParent<GuardControllerScript>().dead = true;
+        }
+
+        //Cannonball
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            GetComponent<Animator>().Play("Armature|Killed", -1, 0f);
+            GetComponentInParent<GuardControllerScript>().anim.SetBool("Stunned", false);
+            GetComponentInParent<GuardControllerScript>().dead = true;
+
+            GetComponentInParent<AudioSource>().clip = hitByBall;
+            GetComponentInParent<AudioSource>().Play();
+
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.CompareTag("Cena4"))

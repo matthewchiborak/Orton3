@@ -67,6 +67,7 @@ public class GuardControllerScript : MonoBehaviour {
 
     public GameObject mine;
     public bool canDropMines;
+    public GameObject ammo;
     public bool canDropAmmo;
 
     public AudioSource whereYouGo;
@@ -176,8 +177,8 @@ public class GuardControllerScript : MonoBehaviour {
                             }
                             else if (randomValue == 4 && canDropAmmo)
                             {
-                                //dropSource.Play();
-                                //Instantiate(can, new Vector3((float)(transform.position.x), (float)(transform.position.y + 30f), (float)(transform.position.z)), transform.rotation);
+                                dropSource.Play();
+                                Instantiate(ammo, new Vector3((float)(transform.position.x), (float)(transform.position.y + 5f), (float)(transform.position.z)), transform.rotation);
                             }
                         }
                     }
