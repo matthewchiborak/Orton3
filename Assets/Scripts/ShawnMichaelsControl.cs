@@ -264,7 +264,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             return;
         }
 
-        if(Input.GetKey(KeyCode.Alpha1) && !growingGun)
+        if(Input.GetKey(KeyCode.Alpha1) && !growingGun && storedInfo.checkIfItemEnabled(0))
         {
             storedInfo.selectItem(0);
             launchArrow.SetActive(false);
@@ -276,7 +276,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha2) && !growingGun)
+        else if (Input.GetKey(KeyCode.Alpha2) && !growingGun && storedInfo.checkIfItemEnabled(1))
         {
             storedInfo.selectItem(1);
             launchArrow.SetActive(false);
@@ -288,7 +288,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha3) && !growingGun)
+        else if (Input.GetKey(KeyCode.Alpha3) && !growingGun && storedInfo.checkIfItemEnabled(2))
         {
             storedInfo.selectItem(2);
             launchArrow.SetActive(true);
@@ -300,7 +300,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha4) && !growingGun)
+        else if (Input.GetKey(KeyCode.Alpha4) && !growingGun && storedInfo.checkIfItemEnabled(3))
         {
             storedInfo.selectItem(3);
             launchArrow.SetActive(false);
@@ -312,7 +312,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha5) && !growingGun)
+        else if (Input.GetKey(KeyCode.Alpha5) && !growingGun && storedInfo.checkIfItemEnabled(4))
         {
             storedInfo.selectItem(4);
             launchArrow.SetActive(false);
@@ -324,7 +324,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha6) && !growingGun)
+        else if (Input.GetKey(KeyCode.Alpha6) && !growingGun && storedInfo.checkIfItemEnabled(5))
         {
             storedInfo.selectItem(5);
             launchArrow.SetActive(false);
@@ -336,7 +336,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             }
             //rocketLauncher.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha7))
+        else if (Input.GetKey(KeyCode.Alpha7) && storedInfo.checkIfItemEnabled(6))
         {
             if (!shrikingGun)
             {
@@ -351,7 +351,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
                 rocketLauncher.SetActive(true);
             }
         }
-        else if (Input.GetKey(KeyCode.Alpha8))
+        else if (Input.GetKey(KeyCode.Alpha8) && storedInfo.checkIfItemEnabled(7))
         {
             if (!shrikingGun)
             {

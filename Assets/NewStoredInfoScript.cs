@@ -22,7 +22,7 @@ public class NewStoredInfoScript : MonoBehaviour {
     public ShawnMichaelsControl shawnMichaelsScript;
     public Animator shawnMichaelsAnim;
 
-    private bool[] abilityEnabled = new bool[9];
+    public bool[] abilityEnabled = new bool[9];
 
     public Material[] itemMaterials = new Material[9];
     public Image itemImage;
@@ -622,10 +622,10 @@ public class NewStoredInfoScript : MonoBehaviour {
             abilityEnabled[2] = true;
             abilityEnabled[3] = true;
             abilityEnabled[4] = true;
-            abilityEnabled[5] = true;
-            abilityEnabled[6] = true;
-            abilityEnabled[7] = true;
-            abilityEnabled[8] = true;
+            //abilityEnabled[5] = true;
+            //abilityEnabled[6] = true;
+            //abilityEnabled[7] = true;
+            //abilityEnabled[8] = true;
 
             if(abilityEnabled[8])
             {

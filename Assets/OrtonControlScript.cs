@@ -216,37 +216,37 @@ public class OrtonControlScript : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) && storedInfo.checkIfItemEnabled(0))
         {
             storedInfo.selectItem(0);
             launchArrow.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha2))
+        else if (Input.GetKey(KeyCode.Alpha2) && storedInfo.checkIfItemEnabled(1))
         {
             storedInfo.selectItem(1);
             launchArrow.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha3))
+        else if (Input.GetKey(KeyCode.Alpha3) && storedInfo.checkIfItemEnabled(2))
         {
             storedInfo.selectItem(2);
             launchArrow.SetActive(true);
         }
-        else if (Input.GetKey(KeyCode.Alpha4))
+        else if (Input.GetKey(KeyCode.Alpha4) && storedInfo.checkIfItemEnabled(3))
         {
             storedInfo.selectItem(3);
             launchArrow.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha5))
+        else if (Input.GetKey(KeyCode.Alpha5) && storedInfo.checkIfItemEnabled(4))
         {
             storedInfo.selectItem(4);
             launchArrow.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha6))
+        else if (Input.GetKey(KeyCode.Alpha6) && storedInfo.checkIfItemEnabled(5))
         {
             storedInfo.selectItem(5);
             launchArrow.SetActive(false);
         }
-        else if (Input.GetKey(KeyCode.Alpha7))
+        else if (Input.GetKey(KeyCode.Alpha7) && storedInfo.checkIfItemEnabled(6))
         {
             storedInfo.selectItem(6);
             launchArrow.SetActive(true);

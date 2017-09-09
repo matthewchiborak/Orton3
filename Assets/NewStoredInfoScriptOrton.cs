@@ -23,7 +23,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public OrtonControlScript ortonScript;
     public Animator ortonAnim;
 
-    private bool[] abilityEnabled = new bool[7];
+    public bool[] abilityEnabled = new bool[7];
 
     public Material[] itemMaterials = new Material[7];
     public Image itemImage;
@@ -627,8 +627,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             abilityEnabled[3] = true;
             abilityEnabled[4] = true;
             //Temporary
-            abilityEnabled[5] = true;
-            abilityEnabled[6] = true;
+            //abilityEnabled[5] = true;
+            //abilityEnabled[6] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
             itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
@@ -638,6 +638,11 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         //{
         //    Destroy(persistantInfo);
         //}
+    }
+
+    public bool checkIfItemEnabled(int idNo)
+    {
+        return abilityEnabled[idNo];
     }
 
     public void enableItem(int itemNumber)
