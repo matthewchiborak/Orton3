@@ -28,6 +28,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public Material[] itemMaterials = new Material[7];
     public Image itemImage;
     public Text itemAmount;
+    public Text buttonNo;
     private int bandageAmount = 2;
     private int pillsAmount = 2;
     private int beerAmount = 3;
@@ -628,7 +629,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             abilityEnabled[6] = true;
             UnityEngine.Random.InitState(System.DateTime.Now.Second);
             itemImage.material = itemMaterials[0];
-            itemAmount.text = bandageAmount.ToString();
+            itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
+            buttonNo.text = "1";
         }
         //else if (persistantInfo != this)
         //{
@@ -653,7 +655,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             bandageAmount++;
             if (itemSelected == 0)
             {
-                itemAmount.text = bandageAmount.ToString();
+                itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
             }
         }
         if (itemId == 1)
@@ -666,7 +668,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             pillsAmount++;
             if (itemSelected == 1)
             {
-                itemAmount.text = pillsAmount.ToString();
+                itemAmount.text = pillsAmount.ToString() + "/" + maxItems.ToString();
             }
         }
         if (itemId == 4)
@@ -679,7 +681,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             beerAmount++;
             if (itemSelected == 4)
             {
-                itemAmount.text = beerAmount.ToString();
+                itemAmount.text = beerAmount.ToString() + "/" + maxItems.ToString();
             }
         }
         if(itemId == 5)
@@ -692,7 +694,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             c4Amount++;
             if (itemSelected == 5)
             {
-                itemAmount.text = c4Amount.ToString();
+                itemAmount.text = c4Amount.ToString() + "/" + maxItems.ToString();
             }
         }
     }
@@ -706,7 +708,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             if (bandageAmount > 0)
             {
                 bandageAmount--;
-                itemAmount.text = bandageAmount.ToString();
+                itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
 
                 //Increase the health
                 currentHealth += 50;
@@ -723,7 +725,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             if (pillsAmount > 0)
             {
                 pillsAmount--;
-                itemAmount.text = pillsAmount.ToString();
+                itemAmount.text = pillsAmount.ToString() + "/" + maxItems.ToString();
                 speedMulitplier = 2.0f;
                 return true;
             }
@@ -733,7 +735,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             if (beerAmount > 0)
             {
                 beerAmount--;
-                itemAmount.text = beerAmount.ToString();
+                itemAmount.text = beerAmount.ToString() + "/" + maxItems.ToString();
                 return true;
             }
         }
@@ -742,7 +744,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             if (c4Amount > 0)
             {
                 c4Amount--;
-                itemAmount.text = c4Amount.ToString();
+                itemAmount.text = c4Amount.ToString() + "/" + maxItems.ToString();
                 return true;
             }
         }
@@ -751,7 +753,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             if (beerAmount > 0)
             {
                 beerAmount--;
-                itemAmount.text = beerAmount.ToString();
+                itemAmount.text = beerAmount.ToString() + "/" + maxItems.ToString();
                 return true;
             }
         }
@@ -788,27 +790,28 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
 
         //Swap the UI
         itemImage.material = itemMaterials[item];
+        buttonNo.text = (item + 1).ToString();
 
         //Swap the quantity if its a resource that can be used up
         if (item == 0)
         {
-            itemAmount.text = bandageAmount.ToString();
+            itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
         }
         else if (item == 1)
         {
-            itemAmount.text = pillsAmount.ToString();
+            itemAmount.text = pillsAmount.ToString() + "/" + maxItems.ToString();
         }
         else if (item == 4)
         {
-            itemAmount.text = beerAmount.ToString();
+            itemAmount.text = beerAmount.ToString() + "/" + maxItems.ToString();
         }
         else if (item == 5)
         {
-            itemAmount.text = c4Amount.ToString();
+            itemAmount.text = c4Amount.ToString() + "/" + maxItems.ToString();
         }
         else if (item == 6)
         {
-            itemAmount.text = beerAmount.ToString();
+            itemAmount.text = beerAmount.ToString() + "/" + maxItems.ToString();
         }
         else
         {
