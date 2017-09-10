@@ -93,6 +93,9 @@ public class NewStoredInfoScript : MonoBehaviour {
 
     private bool firedShot;
 
+    private float timeOfAlert;
+    public float durationOfAlert;
+
     void Start()
     {
         Cursor.visible = false;
@@ -136,6 +139,16 @@ public class NewStoredInfoScript : MonoBehaviour {
         bossName.text = name;
         currentBossHealth = maxBossHealth;
         bossBarFront.transform.localScale = new Vector3(currentBossHealth / maxBossHealth, 1, 1);
+    }
+
+    public void alert(Vector3 alertPos)
+    {
+        timeOfAlert = Time.time;
+        lastPosition = alertPos;
+    }
+    public void cancelAlert()
+    {
+        lastPosition = resetPosition;
     }
 
     public void EndBoss()
@@ -937,7 +950,15 @@ public class NewStoredInfoScript : MonoBehaviour {
     void Update()
     {
         MusicFading();
-        
+
+        if(lastPosition != resetPosition)
+        {
+            if ((Time.time) - timeOfAlert > durationOfAlert)
+            {
+                cancelAlert();
+            }
+        }
+
         if (death)
         {
             Time.timeScale = 0.2f;

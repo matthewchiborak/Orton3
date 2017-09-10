@@ -87,7 +87,8 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public Vector2 levelBoundsMax;
     public Vector2 borderOffset;
 
-    
+    private float timeOfAlert;
+    public float durationOfAlert;
 
     void Start()
     {
@@ -126,6 +127,16 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public string getStateString()
     {
         return currentHealth.ToString() + "~" + bandageAmount.ToString() + "~" + pillsAmount.ToString() + "~" + beerAmount.ToString() + "~" + c4Amount.ToString();
+    }
+
+    public void alert(Vector3 alertPos)
+    {
+        timeOfAlert = Time.time;
+        lastPosition = alertPos;
+    }
+    public void cancelAlert()
+    {
+        lastPosition = resetPosition;
     }
 
     public void StartBoss(string name)
@@ -906,26 +917,13 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     {
         MusicFading();
 
-        //Create a way for the player of quitting the game
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    //if (progressLevel == 5 || progressLevel == 4 || progressLevel == 3 || progressLevel == 2)
-        //    //{
-        //    //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "1");
-        //    //}
-
-        //    //if (progressLevel == 24 || progressLevel == 23 || progressLevel == 22 || progressLevel == 21)
-        //    //{
-        //    //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "20");
-        //    //}
-
-        //    //if (progressLevel == 29 || progressLevel == 30 || progressLevel == 31 || progressLevel == 32)
-        //    //{
-        //    //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "28");
-        //    //}
-
-        //    Application.Quit();
-        //}
+        if (lastPosition != resetPosition)
+        {
+            if ((Time.time) - timeOfAlert > durationOfAlert)
+            {
+                cancelAlert();
+            }
+        }
 
         if (death)
         {

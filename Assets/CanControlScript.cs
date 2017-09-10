@@ -14,7 +14,7 @@ public class CanControlScript : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        lifetime = 10f;
+        lifetime = 30f;
         position = GetComponent<Transform>().position;
 
         //GameObject temp = GameObject.FindWithTag("Player");
@@ -34,7 +34,16 @@ public class CanControlScript : MonoBehaviour {
 
     ~CanControlScript()
     {
-        StoredInfoScript.persistantInfo.ignorePlayer = false;
+        if (isForOrton)
+        {
+            storedOrton.ignorePlayer = false;
+            storedOrton.cancelAlert();
+        }
+        else
+        {
+            storedShawn.ignorePlayer = false;
+            storedShawn.cancelAlert();
+        }
     }
 	
 	// Update is called once per frame
@@ -45,12 +54,14 @@ public class CanControlScript : MonoBehaviour {
             if (isForOrton)
             {
                 storedOrton.ignorePlayer = true;
-                storedOrton.lastPosition = GetComponent<Transform>().position;//position;
+                //storedOrton.lastPosition = GetComponent<Transform>().position;//position;
+                storedOrton.alert(GetComponent<Transform>().position);
             }
             else
             {
                 storedShawn.ignorePlayer = true;
-                storedShawn.lastPosition = GetComponent<Transform>().position;// position;
+                //storedShawn.lastPosition = GetComponent<Transform>().position;// position;
+                storedShawn.alert(GetComponent<Transform>().position);
             }
         }
 

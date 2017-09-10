@@ -120,7 +120,8 @@ public class EnemySight : MonoBehaviour {
                         anim.SetBool("PlayerInSight", true);
                         //Vector3 tempVector = new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + 10f, hit.collider.gameObject.transform.position.z);
                         //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                        storedInfoOrton.lastPosition = hit.collider.gameObject.transform.position;
+                        //storedInfoOrton.lastPosition = hit.collider.gameObject.transform.position;
+                        storedInfoOrton.alert(hit.collider.gameObject.transform.position);
                     }
                     else if (!isForOrton && hit.collider.gameObject.CompareTag("Player") && !storedInfoShawn.ignorePlayer)
                     {
@@ -137,7 +138,8 @@ public class EnemySight : MonoBehaviour {
                         anim.SetBool("PlayerInSight", true);
                         //Vector3 tempVector = new Vector3(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + 10f, hit.collider.gameObject.transform.position.z);
                         //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                        storedInfoShawn.lastPosition = hit.collider.gameObject.transform.position;
+                        //storedInfoShawn.lastPosition = hit.collider.gameObject.transform.position;
+                        storedInfoShawn.alert(hit.collider.gameObject.transform.position);
                     }
                 }
             }
@@ -158,7 +160,8 @@ public class EnemySight : MonoBehaviour {
                 //alertSource.Play();
                 //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
                 //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                storedInfoOrton.lastPosition = player.transform.position;
+                //storedInfoOrton.lastPosition = player.transform.position;
+                storedInfoOrton.alert(player.transform.position);
             }
             else if(playerAnim.GetBool("IsRunning") && !isForOrton && !storedInfoShawn.ignorePlayer)
             {
@@ -176,7 +179,8 @@ public class EnemySight : MonoBehaviour {
                 //alertSource.Play();
                 //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
                 //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                storedInfoShawn.lastPosition = player.transform.position;
+                //storedInfoShawn.lastPosition = player.transform.position;
+                storedInfoShawn.alert(player.transform.position);
             }
             else if(!isForOrton && !storedInfoShawn.ignorePlayer)
             {
@@ -195,7 +199,8 @@ public class EnemySight : MonoBehaviour {
                     //alertSource.Play();
                     //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
                     //StoredInfoScript.persistantInfo.lastPosition = tempVector;
-                    storedInfoShawn.lastPosition = player.transform.position;
+                    //storedInfoShawn.lastPosition = player.transform.position;
+                    storedInfoShawn.alert(player.transform.position);
                 }
             }
         }
