@@ -77,10 +77,15 @@ public class SaveController : MonoBehaviour {
             //Orton Level
             orton.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
 
-            if (parsedLine.Count > 2)
+            if(parsedLine.Count > 2)
             {
-                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[2]);
-                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[3]);
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]));
+            }
+
+            if (parsedLine.Count > 7)
+            {
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[7]);
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[8]);
             }
         }
         else if (int.Parse(parsedLine[0]) > (int)LevelID.Mountain)
@@ -90,8 +95,13 @@ public class SaveController : MonoBehaviour {
 
             if (parsedLine.Count > 2)
             {
-                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[2]);
-                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[3]);
+                shawn.GetComponentInParent<NewStoredInfoScript>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), int.Parse(parsedLine[7]));
+            }
+
+            if (parsedLine.Count > 8)
+            {
+                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[8]);
+                shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[9]);
             }
         }
 

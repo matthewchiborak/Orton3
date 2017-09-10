@@ -24,6 +24,7 @@ public class CutscenePlayer : MonoBehaviour {
     public Text nameRightText;
     public Text dialog;
     public Text dialogRight;
+    public Text continueText;
 
     public Material[] portraits;
     public Material[] backgrounds;
@@ -65,6 +66,16 @@ public class CutscenePlayer : MonoBehaviour {
             //    movieStarted = false;
             //}
 
+            //If movie playing and it ended prompt the player to advance
+            if(movieStarted)
+            {
+                if(!soundEffect.isPlaying)
+                {
+                    continueText.color = new Color(1, 1, 1);
+                    continueText.enabled = true;
+                }
+            }
+
             //Pressing enter should advance to the next instruction and put it to the screen
             //if (Input.GetKeyDown(KeyCode.Return) || currentLine == -1 || movieFinished)
             if (Input.GetKeyDown(KeyCode.Return) || currentLine == -1)
@@ -94,6 +105,8 @@ public class CutscenePlayer : MonoBehaviour {
                     nameRightText.enabled = false;
                     dialog.enabled = false;
                     dialogRight.enabled = false;
+                    continueText.enabled = false;
+                    continueText.color = new Color(0, 0, 0);
                     Time.timeScale = 1.0f;
 
                     if(isForOrton)
@@ -138,6 +151,8 @@ public class CutscenePlayer : MonoBehaviour {
                 {
                     //movieLength = float.Parse(parsedLine[1]);
                     dialogBox.enabled = false;
+                    continueText.enabled = false;
+                    continueText.color = new Color(0, 0, 0);
                     nameRight.enabled = false;
                     nameRightText.enabled = false;
                     nameLeft.enabled = false;
@@ -169,6 +184,8 @@ public class CutscenePlayer : MonoBehaviour {
                 if(parsedLine[3] == "L" || parsedLine[3] == "LW")
                 {
                     dialogBox.enabled = true;
+                    continueText.enabled = true;
+                    continueText.color = new Color(0, 0, 0);
                     nameRight.enabled = false;
                     nameRightText.enabled = false;
                     nameLeft.enabled = true;
@@ -190,6 +207,8 @@ public class CutscenePlayer : MonoBehaviour {
                 else if(parsedLine[3] == "R" || parsedLine[3] == "RW")
                 {
                     dialogBox.enabled = true;
+                    continueText.enabled = true;
+                    continueText.color = new Color(0, 0, 0);
                     nameRight.enabled = true;
                     nameRightText.enabled = true;
                     nameLeft.enabled = false;
@@ -212,6 +231,8 @@ public class CutscenePlayer : MonoBehaviour {
                 {
                     //No dialog stuffs
                     dialogBox.enabled = false;
+                    continueText.enabled = false;
+                    continueText.color = new Color(0, 0, 0);
                     nameRight.enabled = false;
                     nameRightText.enabled = false;
                     nameLeft.enabled = false;
@@ -238,6 +259,8 @@ public class CutscenePlayer : MonoBehaviour {
         portraitRight.enabled = true;
         portraitLeft.enabled = true;
         dialogBox.enabled = true;
+        continueText.enabled = true;
+        continueText.color = new Color(0, 0, 0);
         nameLeft.enabled = false;
         nameRight.enabled = false;
         nameLeftText.enabled = false;

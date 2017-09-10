@@ -112,6 +112,22 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         showScreen();
     }
 
+    public void setInfoOnLoad(float health, int bandage, int pil, int beer, int bombs)
+    {
+        currentHealth = health;
+        bandageAmount = bandage;
+        pillsAmount = pil;
+        beerAmount = beer;
+        c4Amount = bombs;
+
+        itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
+        healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
+    }
+    public string getStateString()
+    {
+        return currentHealth.ToString() + "~" + bandageAmount.ToString() + "~" + pillsAmount.ToString() + "~" + beerAmount.ToString() + "~" + c4Amount.ToString();
+    }
+
     public void StartBoss(string name)
     {
         bossBarBack.enabled = true;

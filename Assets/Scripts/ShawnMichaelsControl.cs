@@ -298,6 +298,15 @@ public class ShawnMichaelsControl : MonoBehaviour {
             {
                 advanceItemPressed = true;
                 storedInfo.tryIncreaseSelectedItem();
+
+                if(storedInfo.itemSelected == 2 || storedInfo.itemSelected == 6 || storedInfo.itemSelected == 7)
+                {
+                    launchArrow.SetActive(true);
+                }
+                else
+                {
+                    launchArrow.SetActive(false);
+                }
             }
         }
         if (Input.GetButton("PreviousItem") && !advanceItemPressed && !growingGun && !shrikingGun)
@@ -354,6 +363,15 @@ public class ShawnMichaelsControl : MonoBehaviour {
             {
                 advanceItemPressed = true;
                 storedInfo.tryDecreaseSelectedItem();
+
+                if (storedInfo.itemSelected == 2 || storedInfo.itemSelected == 6 || storedInfo.itemSelected == 7)
+                {
+                    launchArrow.SetActive(true);
+                }
+                else
+                {
+                    launchArrow.SetActive(false);
+                }
             }
         }
         if(!Input.GetButton("NextItem") && !Input.GetButton("PreviousItem"))
@@ -735,7 +753,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             activateFire = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !onePress)
+        if (Input.GetKeyDown(KeyCode.Escape) && !onePress && (Time.timeScale > 0 || storedInfo.checkIfPaused()))
         {
             onePress = true;
             storedInfo.MapToggle();

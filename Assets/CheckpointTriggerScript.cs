@@ -39,7 +39,16 @@ public class CheckpointTriggerScript : MonoBehaviour {
             hitbox.enabled = false;
             checkpointReachedText.reachedCheckPoint();
 
-            string data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+            string data = "0~0";
+
+            if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+            }
+            else
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+            }
 
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
 
