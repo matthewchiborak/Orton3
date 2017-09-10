@@ -18,8 +18,8 @@ public class GuardControllerScript : MonoBehaviour {
     public AudioSource RKOthump;
 
     //Movement speeds
-    public float patrolSpeed = 120f;
-    public float chaseSpeed = 240f;
+    public float patrolSpeed;// = 120f;
+    public float chaseSpeed;// = 240f;
     public float chaseWaitTime = 5f;
     public float patrolWaitTime = 15f;
     public Transform[] patrolWayPoints;
@@ -317,7 +317,22 @@ public class GuardControllerScript : MonoBehaviour {
         }
 
         nav.speed = chaseSpeed;
-        
+
+        //Check if alert cancelled
+        if (isForOrton)
+        {
+            if(storedInfoOrton.checkIfAlertCancelled())
+            {
+                enemySight.personalLastSighting = storedInfoOrton.resetPosition;
+            }
+        }
+        else
+        {
+            if (storedInfoShawn.checkIfAlertCancelled())
+            {
+                enemySight.personalLastSighting = storedInfoShawn.resetPosition;
+            }
+        }
 
         //Reached last seen position
         if (nav.remainingDistance < nav.stoppingDistance)

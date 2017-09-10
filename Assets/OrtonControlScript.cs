@@ -586,11 +586,11 @@ public class OrtonControlScript : MonoBehaviour
         //Reduce speed powerup
         if (storedInfo.speedMulitplier > 1.0)
         {
-            storedInfo.speedMulitplier -= 0.005f;
+            storedInfo.speedMulitplier -= 0.0005f;
         }
         if (storedInfo.speedMulitplier < 1.0)
         {
-            storedInfo.speedMulitplier += 0.005f;
+            storedInfo.speedMulitplier += 0.0005f;
         }
 
         if (sockoing)

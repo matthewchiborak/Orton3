@@ -946,6 +946,11 @@ public class NewStoredInfoScript : MonoBehaviour {
         selectItem(targetItem);
     }
 
+    public bool checkIfAlertCancelled()
+    {
+        return (Time.time - timeOfAlert) > durationOfAlert;
+    }
+
     //// Update is called once per frame
     void Update()
     {
