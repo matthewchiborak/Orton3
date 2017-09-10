@@ -108,6 +108,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
     private int launchID;
     private bool activateFire;
 
+    private bool advanceItemPressed;
+
     // Use this for initialization
     void Start ()
     {
@@ -264,7 +266,102 @@ public class ShawnMichaelsControl : MonoBehaviour {
             return;
         }
 
-        if(Input.GetKey(KeyCode.Alpha1) && !growingGun && storedInfo.checkIfItemEnabled(0))
+        if (Input.GetButton("NextItem") && !advanceItemPressed && !growingGun && !shrikingGun)
+        {
+            if (storedInfo.itemSelected == 5 && storedInfo.checkIfItemEnabled(6))
+            {
+                launchArrow.SetActive(true);
+                if (!rocketLauncher.active)
+                {
+                    bringOutGun.Play();
+                    growingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                advanceItemPressed = true;
+                storedInfo.selectItem(6);
+
+                rocketLauncher.SetActive(true);
+            }
+            else if (storedInfo.itemSelected == 7 || (storedInfo.itemSelected == 6 && !storedInfo.checkIfItemEnabled(7)))
+            {
+                storedInfo.selectItem(0);
+                launchArrow.SetActive(false);
+                if (rocketLauncher.active)
+                {
+                    putAwayGun.Play();
+                    shrikingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                advanceItemPressed = true;
+            }
+            else
+            {
+                advanceItemPressed = true;
+                storedInfo.tryIncreaseSelectedItem();
+            }
+        }
+        if (Input.GetButton("PreviousItem") && !advanceItemPressed && !growingGun && !shrikingGun)
+        {
+            //if (storedInfo.itemSelected == 0)
+            //{
+            //    growingGun = true;
+            //}
+            //if (storedInfo.itemSelected == 6)
+            //{
+            //    shrikingGun = true;
+            //}
+            if (storedInfo.itemSelected == 0 && storedInfo.checkIfItemEnabled(7))
+            {
+                launchArrow.SetActive(true);
+                if (!rocketLauncher.active)
+                {
+                    bringOutGun.Play();
+                    growingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                advanceItemPressed = true;
+                storedInfo.selectItem(7);
+
+                rocketLauncher.SetActive(true);
+            }
+            else if (storedInfo.itemSelected == 0 && !storedInfo.checkIfItemEnabled(7) && storedInfo.checkIfItemEnabled(6))
+            {
+                launchArrow.SetActive(true);
+                if (!rocketLauncher.active)
+                {
+                    bringOutGun.Play();
+                    growingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                advanceItemPressed = true;
+                storedInfo.selectItem(6);
+
+                rocketLauncher.SetActive(true);
+            }
+            else if (storedInfo.itemSelected == 6)
+            {
+                storedInfo.selectItem(5);
+                launchArrow.SetActive(false);
+                if (rocketLauncher.active)
+                {
+                    putAwayGun.Play();
+                    shrikingGun = true;
+                    timeGrowthBegan = Time.time;
+                }
+                advanceItemPressed = true;
+            }
+            else
+            {
+                advanceItemPressed = true;
+                storedInfo.tryDecreaseSelectedItem();
+            }
+        }
+        if(!Input.GetButton("NextItem") && !Input.GetButton("PreviousItem"))
+        {
+            advanceItemPressed = false;
+        }
+
+        if (Input.GetKey(KeyCode.Alpha1) && !growingGun && storedInfo.checkIfItemEnabled(0))
         {
             storedInfo.selectItem(0);
             launchArrow.SetActive(false);
@@ -638,13 +735,13 @@ public class ShawnMichaelsControl : MonoBehaviour {
             activateFire = false;
         }
 
-        if (Input.GetButtonDown("pause") && !onePress)
+        if (Input.GetKeyDown(KeyCode.Escape) && !onePress)
         {
             onePress = true;
             storedInfo.MapToggle();
         }
 
-        if(Input.GetButtonUp("pause"))
+        if(Input.GetKeyUp(KeyCode.Escape))
         {
             onePress = false;
         }
@@ -654,8 +751,12 @@ public class ShawnMichaelsControl : MonoBehaviour {
         {
             storedInfo.reloadFromLastCheckpoint();
         }
+        if (storedInfo.checkIfPaused() && Input.GetButtonDown("ReturnToMenu"))
+        {
+            storedInfo.loadMainMenu();
+        }
 
-        if(anim.GetBool("IsCrouching"))
+        if (anim.GetBool("IsCrouching"))
         {
             playerHitBox.center = new Vector3(playerHitBox.center.x, 0.41f, playerHitBox.center.z);
             playerHitBox.size = new Vector3(playerHitBox.size.x, 0.8f, playerHitBox.size.z);

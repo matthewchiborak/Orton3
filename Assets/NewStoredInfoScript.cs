@@ -862,34 +862,65 @@ public class NewStoredInfoScript : MonoBehaviour {
         return firedShot;
     }
 
+    public void loadMainMenu()
+    {
+        blockScreen();
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
 
+    public void tryIncreaseSelectedItem()
+    {
+        int targetItem = itemSelected + 1;
+
+        while(true)
+        {
+            if (targetItem == abilityEnabled.Length - 1)
+            {
+                targetItem = 0;
+            }
+
+            if(abilityEnabled[targetItem])
+            {
+                break;
+            }
+            else
+            {
+                targetItem++;
+            }
+        }
+
+        selectItem(targetItem);
+    }
+    public void tryDecreaseSelectedItem()
+    {
+        int targetItem = itemSelected - 1;
+
+        while (true)
+        {
+            if (targetItem < 0)
+            {
+                targetItem = abilityEnabled.Length - 2;
+            }
+
+            if (abilityEnabled[targetItem])
+            {
+                break;
+            }
+            else
+            {
+                targetItem--;
+            }
+        }
+
+        selectItem(targetItem);
+    }
 
     //// Update is called once per frame
     void Update()
     {
         MusicFading();
-
-        //Create a way for the player of quitting the game
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //if (progressLevel == 5 || progressLevel == 4 || progressLevel == 3 || progressLevel == 2)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "1");
-            //}
-
-            //if (progressLevel == 24 || progressLevel == 23 || progressLevel == 22 || progressLevel == 21)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "20");
-            //}
-
-            //if (progressLevel == 29 || progressLevel == 30 || progressLevel == 31 || progressLevel == 32)
-            //{
-            //    System.IO.File.WriteAllText("Assets/Resources/Save.txt", "28");
-            //}
-
-            Application.Quit();
-        }
-
+        
         if (death)
         {
             Time.timeScale = 0.2f;

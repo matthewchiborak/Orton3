@@ -91,6 +91,7 @@ public class OrtonControlScript : MonoBehaviour
     private bool isFiring;
     private bool hasFired;
 
+    private bool advanceItemPressed;
 
     // Use this for initialization
     void Start()
@@ -214,6 +215,21 @@ public class OrtonControlScript : MonoBehaviour
         if(sockoing)
         {
             return;
+        }
+
+        if (Input.GetButton("NextItem") && !advanceItemPressed)
+        {
+            advanceItemPressed = true;
+            storedInfo.tryIncreaseSelectedItem();
+        }
+        if (Input.GetButton("PreviousItem") && !advanceItemPressed)
+        {
+            advanceItemPressed = true;
+            storedInfo.tryDecreaseSelectedItem();
+        }
+        if (!Input.GetButton("NextItem") && !Input.GetButton("PreviousItem"))
+        {
+            advanceItemPressed = false;
         }
 
         if (Input.GetKey(KeyCode.Alpha1) && storedInfo.checkIfItemEnabled(0))
@@ -404,14 +420,14 @@ public class OrtonControlScript : MonoBehaviour
             hasFired = true;
             isFiring = false;
         }
-
-        if (Input.GetButtonDown("pause") && !onePress)
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !onePress)
         {
             onePress = true;
             storedInfo.MapToggle();
         }
 
-        if (Input.GetButtonUp("pause"))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
             onePress = false;
         }
@@ -420,6 +436,11 @@ public class OrtonControlScript : MonoBehaviour
         if (storedInfo.checkIfPaused() && Input.GetButtonDown("Reload"))
         {
             storedInfo.reloadFromLastCheckpoint();
+        }
+
+        if (storedInfo.checkIfPaused() && Input.GetButtonDown("ReturnToMenu"))
+        {
+            storedInfo.loadMainMenu();
         }
 
         if (anim.GetBool("IsCrouching"))
