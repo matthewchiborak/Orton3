@@ -8,6 +8,7 @@ public class EnemySight : MonoBehaviour {
     public NewStoredInfoScriptOrton storedInfoOrton;
 
     public float fieldOfViewAngle = 110f;
+    //public float fieldOfViewAngle = 300f;
     public bool playerInSight;
     public Vector3 personalLastSighting; //For hearing
 
@@ -102,7 +103,8 @@ public class EnemySight : MonoBehaviour {
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position + new Vector3(0f,10f,0f), direction.normalized, out hit, 6 * col.radius))
+                //if (Physics.Raycast(transform.position + new Vector3(0f,10f,0f), direction.normalized, out hit, 6 * col.radius))
+                if (Physics.Raycast(transform.position + new Vector3(0f, 6.5f, 0f), direction.normalized, out hit, 6 * col.radius))
                 {
                     
                     if(isForOrton && hit.collider.gameObject.CompareTag("Player") && !storedInfoOrton.ignorePlayer)
