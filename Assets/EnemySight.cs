@@ -83,7 +83,47 @@ public class EnemySight : MonoBehaviour {
         }
     }
 
-    
+    //Trigger alert
+    public void triggerAlert()
+    {
+        if (isForOrton && !storedInfoOrton.ignorePlayer)
+        {
+            if (!anim.GetBool("PlayerInSight"))
+            {
+                mark.SetActive(true);
+
+                markTimer = timeForMark;
+                alertSource.Play();
+            }
+
+            playerInSight = true;
+            anim.SetBool("PlayerInSight", true);
+            //alertSource.Play();
+            //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
+            //StoredInfoScript.persistantInfo.lastPosition = tempVector;
+            //storedInfoOrton.lastPosition = player.transform.position;
+            storedInfoOrton.alert(player.transform.position);
+        }
+        else if (!isForOrton && !storedInfoShawn.ignorePlayer)
+        {
+
+            if (!anim.GetBool("PlayerInSight"))
+            {
+                mark.SetActive(true);
+
+                markTimer = timeForMark;
+                alertSource.Play();
+            }
+
+            playerInSight = true;
+            anim.SetBool("PlayerInSight", true);
+            //alertSource.Play();
+            //Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 10f, player.transform.position.z);
+            //StoredInfoScript.persistantInfo.lastPosition = tempVector;
+            //storedInfoShawn.lastPosition = player.transform.position;
+            storedInfoShawn.alert(player.transform.position);
+        }
+    }
 
     void OnTriggerStay(Collider other)
     {

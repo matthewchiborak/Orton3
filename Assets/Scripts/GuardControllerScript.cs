@@ -193,6 +193,7 @@ public class GuardControllerScript : MonoBehaviour {
                 if(stunTimer > stunTime)
                 {
                     stunTimer = stunTime;
+                    enemySight.triggerAlert();
                 }
             }
             else if(enemySight.playerInSight && isForOrton && storedInfoOrton.currentHealth > 0)
@@ -343,16 +344,16 @@ public class GuardControllerScript : MonoBehaviour {
 
             if(chaseTimer > chaseWaitTime)
             {
-                if(isForOrton)
-                {
-                    storedInfoOrton.lastPosition = storedInfoOrton.resetPosition;
-                    enemySight.personalLastSighting = storedInfoOrton.resetPosition;
-                }
-                else
-                {
-                    storedInfoShawn.lastPosition = storedInfoShawn.resetPosition;
-                    enemySight.personalLastSighting = storedInfoShawn.resetPosition;
-                }
+                //if(isForOrton)
+                //{
+                //    storedInfoOrton.lastPosition = storedInfoOrton.resetPosition;
+                //    enemySight.personalLastSighting = storedInfoOrton.resetPosition;
+                //}
+                //else
+                //{
+                //    storedInfoShawn.lastPosition = storedInfoShawn.resetPosition;
+                //    enemySight.personalLastSighting = storedInfoShawn.resetPosition;
+                //}
                 
                 chaseTimer = 0f;
                 //Play where'd you go

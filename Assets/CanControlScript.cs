@@ -14,7 +14,7 @@ public class CanControlScript : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        lifetime = 30f;
+        lifetime = 15f;
         position = GetComponent<Transform>().position;
 
         //GameObject temp = GameObject.FindWithTag("Player");
