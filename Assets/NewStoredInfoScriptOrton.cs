@@ -90,6 +90,10 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     private float timeOfAlert;
     public float durationOfAlert;
 
+    private int enemiesKilled;
+    private int alerts;
+    private int deaths;
+
     void Start()
     {
         Cursor.visible = false;
@@ -113,13 +117,16 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         showScreen();
     }
 
-    public void setInfoOnLoad(float health, int bandage, int pil, int beer, int bombs)
+    public void setInfoOnLoad(float health, int bandage, int pil, int beer, int bombs, int kills, int alerts, int deaths)
     {
         currentHealth = health;
         bandageAmount = bandage;
         pillsAmount = pil;
         beerAmount = beer;
         c4Amount = bombs;
+        this.enemiesKilled = kills;
+        this.alerts = alerts;
+        this.deaths = deaths;
 
         itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
         healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
@@ -127,6 +134,10 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     public string getStateString()
     {
         return currentHealth.ToString() + "~" + bandageAmount.ToString() + "~" + pillsAmount.ToString() + "~" + beerAmount.ToString() + "~" + c4Amount.ToString();
+    }
+    public string getRankStrin()
+    {
+        return enemiesKilled.ToString() + "~" + alerts.ToString() + "~" + deaths.ToString();
     }
 
     public void alert(Vector3 alertPos)
@@ -136,6 +147,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     }
     public void cancelAlert()
     {
+        alerts++;
         lastPosition = resetPosition;
     }
 
@@ -404,7 +416,13 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
             Time.timeScale = 0.2f;
             death = true;
             GameOverSong.Play();
+            deaths++;
         }
+    }
+
+    public void addAnotherGuardToTheKillCount()
+    {
+        enemiesKilled++;
     }
 
     public void ReloadFromGameOver()
@@ -439,6 +457,9 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         //StoredInfoScript.persistantInfo.lastPosition = StoredInfoScript.persistantInfo.resetPosition;
 
         //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
+
+        //Update rank that persists without checkpoint
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
 
         SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
     }
@@ -808,6 +829,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     {
         blockScreen();
         Time.timeScale = 1.0f;
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
         SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
     }
 
@@ -862,6 +884,7 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
     {
         blockScreen();
         Time.timeScale = 1.0f;
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 

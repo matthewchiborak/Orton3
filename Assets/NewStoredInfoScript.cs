@@ -96,6 +96,10 @@ public class NewStoredInfoScript : MonoBehaviour {
     private float timeOfAlert;
     public float durationOfAlert;
 
+    private int enemiesKilled;
+    private int alerts;
+    private int deaths;
+
     void Start()
     {
         Cursor.visible = false;
@@ -114,7 +118,7 @@ public class NewStoredInfoScript : MonoBehaviour {
         showScreen();
     }
 
-    public void setInfoOnLoad(float health, int bandage, int pil, int beer, int bombs, int balls)
+    public void setInfoOnLoad(float health, int bandage, int pil, int beer, int bombs, int balls, int kills, int alerts, int deaths)
     {
         currentHealth = health;
         bandageAmount = bandage;
@@ -122,6 +126,9 @@ public class NewStoredInfoScript : MonoBehaviour {
         beerAmount = beer;
         c4Amount = bombs;
         cannonBallAmount = balls;
+        this.enemiesKilled = kills;
+        this.alerts = alerts;
+        this.deaths = deaths;
 
         itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
         healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
@@ -129,6 +136,10 @@ public class NewStoredInfoScript : MonoBehaviour {
     public string getStateString()
     {
         return currentHealth.ToString() + "~" + bandageAmount.ToString() + "~" + pillsAmount.ToString() + "~" + beerAmount.ToString() + "~" + c4Amount.ToString() + "~" + cannonBallAmount.ToString();
+    }
+    public string getRankStrin()
+    {
+        return enemiesKilled.ToString() + "~" + alerts.ToString() + "~" + deaths.ToString();
     }
 
     public void StartBoss(string name)
@@ -148,7 +159,13 @@ public class NewStoredInfoScript : MonoBehaviour {
     }
     public void cancelAlert()
     {
+        alerts++;
         lastPosition = resetPosition;
+    }
+
+    public void addAnotherGuardToTheKillCount()
+    {
+        enemiesKilled++;
     }
 
     public void EndBoss()
@@ -390,6 +407,7 @@ public class NewStoredInfoScript : MonoBehaviour {
             Time.timeScale = 0.2f;
             death = true;
             GameOverSong.Play();
+            deaths++;
         }
     }
 
@@ -426,6 +444,8 @@ public class NewStoredInfoScript : MonoBehaviour {
 
         //CHECK THE SAVE FILE FOR WHERE GAME CHECKPOINTED
 
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
+
         SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
         //SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
     }
@@ -434,6 +454,7 @@ public class NewStoredInfoScript : MonoBehaviour {
     {
         blockScreen();
         Time.timeScale = 1.0f;
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
         SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
     }
 
@@ -896,6 +917,7 @@ public class NewStoredInfoScript : MonoBehaviour {
     {
         blockScreen();
         Time.timeScale = 1.0f;
+        System.IO.File.WriteAllText("Assets/Resources/Rank.txt", getRankStrin());
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 

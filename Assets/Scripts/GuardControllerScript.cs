@@ -95,6 +95,15 @@ public class GuardControllerScript : MonoBehaviour {
             }
             else
             {
+                if(isForOrton)
+                {
+                    storedInfoOrton.addAnotherGuardToTheKillCount();
+                }
+                else
+                {
+                    storedInfoShawn.addAnotherGuardToTheKillCount();
+                }
+
                 Destroy(gameObject);
             }
         }

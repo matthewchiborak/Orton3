@@ -51,6 +51,7 @@ public class SaveController : MonoBehaviour {
     public Vector2[] leftCheckPointRightObjectToDisable;
 
     private List<string> parsedLine;
+    private List<string> parsedRankLine;
 
     // Use this for initialization
     void Start ()
@@ -64,9 +65,20 @@ public class SaveController : MonoBehaviour {
         }
 
         //Parse
-        //progressLevel = Int32.Parse(assetText);
         parsedLine.AddRange(assetText.Split("~"[0]));
-        
+
+        //Rank
+        string assetTextRank;
+        parsedRankLine = new List<string>();
+
+        using (var streamReader = new StreamReader("Assets/Resources/Rank.txt", Encoding.UTF8))
+        {
+            assetTextRank = streamReader.ReadToEnd();
+        }
+
+        //Parse
+        parsedRankLine.AddRange(assetTextRank.Split("~"[0]));
+
         //Set everything to the correct position
         if (int.Parse(parsedLine[0]) == (int)LevelID.Mountain)
         {
@@ -79,7 +91,7 @@ public class SaveController : MonoBehaviour {
 
             if(parsedLine.Count > 2)
             {
-                orton.GetComponentInParent<NewStoredInfoScriptOrton>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]));
+                orton.GetComponentInParent<NewStoredInfoScriptOrton>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), int.Parse(parsedRankLine[0]), int.Parse(parsedRankLine[1]), int.Parse(parsedRankLine[2]));
             }
 
             if (parsedLine.Count > 7)
@@ -95,7 +107,7 @@ public class SaveController : MonoBehaviour {
 
             if (parsedLine.Count > 2)
             {
-                shawn.GetComponentInParent<NewStoredInfoScript>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), int.Parse(parsedLine[7]));
+                shawn.GetComponentInParent<NewStoredInfoScript>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), int.Parse(parsedLine[7]), int.Parse(parsedRankLine[0]), int.Parse(parsedRankLine[1]), int.Parse(parsedRankLine[2]));
             }
 
             if (parsedLine.Count > 8)

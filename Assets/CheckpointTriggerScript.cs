@@ -40,19 +40,23 @@ public class CheckpointTriggerScript : MonoBehaviour {
             checkpointReachedText.reachedCheckPoint();
 
             string data = "0~0";
+            string rankData = "0~0~0";
 
             if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
             {
                 data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScriptOrton>().getRankStrin();
             }
             else
             {
                 data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScript>().getRankStrin();
             }
 
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
+            System.IO.File.WriteAllText("Assets/Resources/Rank.txt", rankData);
 
-            if(changesCurrentDestination)
+            if (changesCurrentDestination)
             {
                 if(other.GetComponentInParent<NewStoredInfoScriptOrton>())
                 {
