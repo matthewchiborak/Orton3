@@ -39,26 +39,9 @@ public class CheckpointTriggerScript : MonoBehaviour {
             hitbox.enabled = false;
             checkpointReachedText.reachedCheckPoint();
 
-            string data = "0~0";
-            string rankData = "0~0~0";
-
-            if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
-            {
-                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
-                rankData = other.GetComponentInParent<NewStoredInfoScriptOrton>().getRankStrin();
-            }
-            else
-            {
-                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
-                rankData = other.GetComponentInParent<NewStoredInfoScript>().getRankStrin();
-            }
-
-            System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
-            System.IO.File.WriteAllText("Assets/Resources/Rank.txt", rankData);
-
             if (changesCurrentDestination)
             {
-                if(other.GetComponentInParent<NewStoredInfoScriptOrton>())
+                if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
                 {
                     other.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination = cordsOfDestination;
                 }
@@ -67,6 +50,24 @@ public class CheckpointTriggerScript : MonoBehaviour {
                     other.GetComponentInParent<NewStoredInfoScript>().currentDestination = cordsOfDestination;
                 }
             }
+
+            string data = "0~0";
+            string rankData = "0~0~0";
+
+            if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScriptOrton>().getRankStrin();
+            }
+            else
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().currentDestination.x.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().currentDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScript>().getRankStrin();
+            }
+
+            System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
+            System.IO.File.WriteAllText("Assets/Resources/Rank.txt", rankData);
+            
 
             for(int i = 0; i < objectsToEnable.Length; i++)
             {

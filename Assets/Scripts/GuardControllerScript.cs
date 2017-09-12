@@ -5,7 +5,7 @@ public class GuardControllerScript : MonoBehaviour {
 
     public Animator anim;
     public bool dead = false;
-    private int deathCount = 240;
+    private int deathCount = 420;
 
     public Transform rkoPoint;
     public BoxCollider solidBox;

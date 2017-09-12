@@ -19,8 +19,28 @@ public class LoadSceneTriggerScript : MonoBehaviour {
             blackScreen.enabled = true;
             loadingText.enabled = true;
 
-            string data = ((int)sceneToLoad).ToString() + "~0";
+            /*if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScriptOrton>().getRankStrin();
+            }
+            else
+            {
+                data = ((int)levelID).ToString() + "~" + checkPointID.ToString() + "~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~" + cordsOfDestination.x.ToString() + "~" + cordsOfDestination.y.ToString();
+                rankData = other.GetComponentInParent<NewStoredInfoScript>().getRankStrin();
+            }*/
 
+            string data;
+
+            if (other.GetComponentInParent<NewStoredInfoScriptOrton>())
+            {
+                data = ((int)sceneToLoad).ToString() + "~0~" + other.GetComponentInParent<NewStoredInfoScriptOrton>().getStateString() + "~0~0";
+            }
+            else
+            {
+                data = ((int)sceneToLoad).ToString() + "~0~" + other.GetComponentInParent<NewStoredInfoScript>().getStateString() + "~0~0";
+            }
+            
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
             
             SceneManager.LoadScene(((SceneNames)((int)sceneToLoad)).ToString(), LoadSceneMode.Single);
