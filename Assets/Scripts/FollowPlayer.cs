@@ -7,7 +7,7 @@ public class FollowPlayer : MonoBehaviour {
     public Camera cam;
 
     private float distanceToPlayer = 25.0f;
-    private float totalMouse = 0.0f;
+    public float totalMouse;// = 180.0f;
 
     private void Update()
     {
