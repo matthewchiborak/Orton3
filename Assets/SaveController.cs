@@ -53,6 +53,8 @@ public class SaveController : MonoBehaviour {
     private List<string> parsedLine;
     private List<string> parsedRankLine;
 
+    //public GameObject storedShawn;
+
     // Use this for initialization
     void Start ()
     {
@@ -79,10 +81,50 @@ public class SaveController : MonoBehaviour {
         //Parse
         parsedRankLine.AddRange(assetTextRank.Split("~"[0]));
 
+        //Enable Object
+        for (int i = 0; i < leftCheckPointRightObjectToEnable.Length; i++)
+        {
+            if (int.Parse(parsedLine[1]) == leftCheckPointRightObjectToEnable[i].x)
+            {
+                objectsToEnable[(int)leftCheckPointRightObjectToEnable[i].y].SetActive(true);
+            }
+        }
+
         //Set everything to the correct position
         if (int.Parse(parsedLine[0]) == (int)LevelID.Mountain)
         {
             //Mountain is a unique case
+            if(int.Parse(parsedLine[1]) < 3)
+            {
+                orton.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
+
+                if (parsedLine.Count > 2)
+                {
+                    orton.GetComponentInParent<NewStoredInfoScriptOrton>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), int.Parse(parsedRankLine[0]), int.Parse(parsedRankLine[1]), int.Parse(parsedRankLine[2]));
+                }
+
+                if (parsedLine.Count > 7)
+                {
+                    orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.x = int.Parse(parsedLine[7]);
+                    orton.GetComponentInParent<NewStoredInfoScriptOrton>().currentDestination.y = int.Parse(parsedLine[8]);
+                }
+            }
+            else
+            {
+                //storedShawn.SetActive(true);
+                shawn.transform.position = checkPointPositions[int.Parse(parsedLine[1])].position;
+
+                if (parsedLine.Count > 2)
+                {
+                    shawn.GetComponentInParent<NewStoredInfoScript>().setInfoOnLoad(float.Parse(parsedLine[2]), int.Parse(parsedLine[3]), int.Parse(parsedLine[4]), int.Parse(parsedLine[5]), int.Parse(parsedLine[6]), 8, int.Parse(parsedRankLine[0]), int.Parse(parsedRankLine[1]), int.Parse(parsedRankLine[2]));
+                }
+
+                if (parsedLine.Count > 8)
+                {
+                    shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.x = int.Parse(parsedLine[7]);
+                    shawn.GetComponentInParent<NewStoredInfoScript>().currentDestination.y = int.Parse(parsedLine[8]);
+                }
+            }
         }
         else if(int.Parse(parsedLine[0]) < (int)LevelID.Mountain)
         {
@@ -117,14 +159,7 @@ public class SaveController : MonoBehaviour {
             }
         }
 
-        //Enable Object
-        for (int i = 0; i < leftCheckPointRightObjectToEnable.Length; i++)
-        {
-            if (int.Parse(parsedLine[1]) == leftCheckPointRightObjectToEnable[i].x)
-            {
-                objectsToEnable[(int)leftCheckPointRightObjectToEnable[i].y].SetActive(true);
-            }
-        }
+        
 
         //Disable Objects
         for (int i = 0; i < leftCheckPointRightObjectToDisable.Length; i++)

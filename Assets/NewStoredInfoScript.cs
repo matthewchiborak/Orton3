@@ -133,6 +133,19 @@ public class NewStoredInfoScript : MonoBehaviour {
         itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
         healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
     }
+    public void setItems(int bandage, int pil, int beer, int bombs, int balls, int kills, int alerts, int deaths)
+    {
+        bandageAmount = bandage;
+        pillsAmount = pil;
+        beerAmount = beer;
+        c4Amount = bombs;
+        cannonBallAmount = balls;
+        this.enemiesKilled = kills;
+        this.alerts = alerts;
+        this.deaths = deaths;
+
+        itemAmount.text = bandageAmount.ToString() + "/" + maxItems.ToString();
+    }
     public string getStateString()
     {
         return currentHealth.ToString() + "~" + bandageAmount.ToString() + "~" + pillsAmount.ToString() + "~" + beerAmount.ToString() + "~" + c4Amount.ToString() + "~" + cannonBallAmount.ToString();

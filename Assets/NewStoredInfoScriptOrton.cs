@@ -833,6 +833,35 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         SceneManager.LoadScene(nameOfScene, LoadSceneMode.Single);
     }
 
+    public int getBandageValue()
+    {
+        return bandageAmount;
+    }
+    public int getPillsValue()
+    {
+        return pillsAmount;
+    }
+    public int getCanValue()
+    {
+        return beerAmount;
+    }
+    public int getMineValue()
+    {
+        return c4Amount;
+    }
+    public int getkills()
+    {
+        return enemiesKilled;
+    }
+    public int getAlerts()
+    {
+        return alerts;
+    }
+    public int getDeaths()
+    {
+        return deaths;
+    }
+
     public void selectItem(int item)
     {
         //Check if the item is enabled
