@@ -682,10 +682,10 @@ public class NewStoredInfoScript : MonoBehaviour {
             //DontDestroyOnLoad(gameObject);
             //persistantInfo = this;
             abilityEnabled[0] = true; //Only 1 and 0 will be true when done testing
-            abilityEnabled[1] = true;
-            abilityEnabled[2] = true;
-            abilityEnabled[3] = true;
-            abilityEnabled[4] = true;
+            //abilityEnabled[1] = true;
+            //abilityEnabled[2] = true;
+            //abilityEnabled[3] = true;
+            //abilityEnabled[4] = true;
             //abilityEnabled[5] = true;
             //abilityEnabled[6] = true;
             //abilityEnabled[7] = true;

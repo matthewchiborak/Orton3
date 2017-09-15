@@ -110,6 +110,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     private bool advanceItemPressed;
 
+    public bool runningDisabled;
+
     // Use this for initialization
     void Start ()
     {
@@ -960,7 +962,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
         if (moveHorizontal != 0 || moveVertical != 0)
         {
             //Play the walking animation
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && !runningDisabled)
             {
                 if (isHuman)
                 {
@@ -1065,7 +1067,7 @@ public class ShawnMichaelsControl : MonoBehaviour {
             //gameObject.transform.rotation = rotation;
 
             //Move the player
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && !runningDisabled)
             {
                 movement = rb.transform.forward * storedInfo.speedMulitplier * runSpeed * Time.deltaTime;
             }
