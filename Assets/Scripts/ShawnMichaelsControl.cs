@@ -112,6 +112,8 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     public bool runningDisabled;
 
+    public AudioSource rkoSource;
+
     // Use this for initialization
     void Start ()
     {
@@ -1160,6 +1162,20 @@ public class ShawnMichaelsControl : MonoBehaviour {
         {
             //Move(moveHorizontal, moveVertical);
             Move2(moveHorizontal, moveVertical);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("OrtonBossAttack"))
+        {
+            rkoSource.Play();
+            hitByBullet();
+        }
+        if (other.CompareTag("Nuke"))
+        {
+            storedInfo.setHealth(10f);
+            hitByBullet();
         }
     }
 }

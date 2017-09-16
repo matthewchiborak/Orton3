@@ -510,6 +510,11 @@ public class NewStoredInfoScript : MonoBehaviour {
         backgroundMusic.Play();
     }
 
+    public void setHealth(float health)
+    {
+        currentHealth = health;
+    }
+
     public void switchTracks()
     {
         if (currentTrack != 0)
@@ -784,6 +789,11 @@ public class NewStoredInfoScript : MonoBehaviour {
             }
 
             cannonBallAmount += 4;
+            if(cannonBallAmount > maxBalls)
+            {
+                cannonBallAmount = maxBalls;
+            }
+
             if (itemSelected == 7)
             {
                 itemAmount.text = cannonBallAmount.ToString() + "/" + maxBalls.ToString();
