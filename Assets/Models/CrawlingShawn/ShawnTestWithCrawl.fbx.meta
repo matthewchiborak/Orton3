@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: a9cfa69580797294988af2567a227e7d
+timeCreated: 1505674894
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Camera
+    100004: Lamp
+    100006: LeftElbow
+    100008: LeftElbow_end
+    100010: LeftFoot
+    100012: LeftFoot_end
+    100014: LeftHip
+    100016: LeftKnee
+    100018: LeftShoulder
+    100020: Neck
+    100022: Neck_end
+    100024: RightElbow
+    100026: RightElbow_end
+    100028: RightFoot
+    100030: RightFoot_end
+    100032: RightHip
+    100034: RightKnee
+    100036: RightShoulder
+    100038: Root
+    100040: //RootNode
+    100042: Waist
+    100044: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    400000: Armature
+    400002: Camera
+    400004: Lamp
+    400006: LeftElbow
+    400008: LeftElbow_end
+    400010: LeftFoot
+    400012: LeftFoot_end
+    400014: LeftHip
+    400016: LeftKnee
+    400018: LeftShoulder
+    400020: Neck
+    400022: Neck_end
+    400024: RightElbow
+    400026: RightElbow_end
+    400028: RightFoot
+    400030: RightFoot_end
+    400032: RightHip
+    400034: RightKnee
+    400036: RightShoulder
+    400038: Root
+    400040: //RootNode
+    400042: Waist
+    400044: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    4300000: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+    7400000: Armature|Action
+    7400002: Armature|Crawl1
+    7400004: Armature|Crawl2
+    7400006: Armature|Crouch
+    7400008: Armature|Dead
+    7400010: Armature|FasterSlideIn
+    7400012: Armature|Hit
+    7400014: Armature|Idle
+    7400016: Armature|JumpOut
+    7400018: Armature|Putdown
+    7400020: Armature|Run
+    7400022: Armature|Shoot
+    7400024: Armature|SlideIn
+    7400026: Armature|Socko
+    7400028: Armature|Stomp
+    7400030: Armature|SweetChinMusic
+    7400032: Armature|UCantCMe
+    7400034: Armature|Walk
+    9500000: //RootNode
+    13700000: WWE-I_iOS_CHARACTER_John_Cena_Dashing_Rogue.013
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
