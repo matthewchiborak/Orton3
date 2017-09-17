@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: f2915a9b0e8ff084ab07f1b5137b2c8a
+timeCreated: 1505607178
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: LeftElbow
+    100006: LeftElbow_end
+    100008: LeftFoot
+    100010: LeftFoot_end
+    100012: LeftHip
+    100014: LeftKnee
+    100016: LeftShoulder
+    100018: Neck
+    100020: Neck_end
+    100022: RightElbow
+    100024: RightElbow_end
+    100026: RightFoot
+    100028: RightFoot_end
+    100030: RightHip
+    100032: RightKnee
+    100034: RightShoulder
+    100036: Root
+    100038: Waist
+    100040: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+    400000: Armature
+    400002: //RootNode
+    400004: LeftElbow
+    400006: LeftElbow_end
+    400008: LeftFoot
+    400010: LeftFoot_end
+    400012: LeftHip
+    400014: LeftKnee
+    400016: LeftShoulder
+    400018: Neck
+    400020: Neck_end
+    400022: RightElbow
+    400024: RightElbow_end
+    400026: RightFoot
+    400028: RightFoot_end
+    400030: RightHip
+    400032: RightKnee
+    400034: RightShoulder
+    400036: Root
+    400038: Waist
+    400040: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+    4300000: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+    7400000: Armature|AttackRKO
+    7400002: Armature|Crouch
+    7400004: Armature|Dead.001
+    7400006: Armature|Down
+    7400008: Armature|Dead
+    7400010: Armature|FasterSlideIn
+    7400012: Armature|Hit
+    7400014: Armature|Idle
+    7400016: Armature|JumpOut
+    7400018: Armature|Punch
+    7400020: Armature|Putdown
+    7400022: Armature|RKO
+    7400024: Armature|RKOEnd
+    7400026: Armature|RKOLoop
+    7400028: Armature|Run
+    7400030: Armature|Shoot
+    7400032: Armature|SlideIn
+    7400034: Armature|Socko
+    7400036: Armature|Stomp
+    7400038: Armature|SweetChinMusic
+    7400040: Armature|UCantCMe
+    7400042: Armature|Walk
+    9500000: //RootNode
+    13700000: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
