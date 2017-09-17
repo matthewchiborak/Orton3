@@ -94,7 +94,1547 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|AttackRKO
+      takeName: Armature|AttackRKO
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Crouch
+      takeName: Armature|Crouch
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Dead.001
+      takeName: Armature|Dead.001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Down
+      takeName: Armature|Down
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Dead
+      takeName: Armature|Dead
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|FasterSlideIn
+      takeName: Armature|FasterSlideIn
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Hit
+      takeName: Armature|Hit
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|JumpOut
+      takeName: Armature|JumpOut
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Punch
+      takeName: Armature|Punch
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Putdown
+      takeName: Armature|Putdown
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|RKO
+      takeName: Armature|RKO
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|RKOEnd
+      takeName: Armature|RKOEnd
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|RKOLoop
+      takeName: Armature|RKOLoop
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Shoot
+      takeName: Armature|Shoot
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|SlideIn
+      takeName: Armature|SlideIn
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Socko
+      takeName: Armature|Socko
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Stomp
+      takeName: Armature|Stomp
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|SweetChinMusic
+      takeName: Armature|SweetChinMusic
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|UCantCMe
+      takeName: Armature|UCantCMe
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LeftHip
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot
+        weight: 1
+      - path: Armature/Root/LeftHip/LeftKnee/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/Root/RightHip
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot
+        weight: 1
+      - path: Armature/Root/RightHip/RightKnee/RightFoot/RightFoot_end
+        weight: 1
+      - path: Armature/Root/Waist
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow
+        weight: 1
+      - path: Armature/Root/Waist/LeftShoulder/LeftElbow/LeftElbow_end
+        weight: 1
+      - path: Armature/Root/Waist/Neck
+        weight: 1
+      - path: Armature/Root/Waist/Neck/Neck_end
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow
+        weight: 1
+      - path: Armature/Root/Waist/RightShoulder/RightElbow/RightElbow_end
+        weight: 1
+      - path: WWE-I_iOS_CHARACTER_Steve_Austin_Rattlesnake_Arms
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

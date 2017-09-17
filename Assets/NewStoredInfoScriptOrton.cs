@@ -150,6 +150,10 @@ public class NewStoredInfoScriptOrton : MonoBehaviour {
         alerts++;
         lastPosition = resetPosition;
     }
+    public void cancelAlertWithoutPenalty()
+    {
+        lastPosition = resetPosition;
+    }
 
     public void StartBoss(string name)
     {
