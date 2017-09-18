@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
 
 public class HallwayCrawlControl : MonoBehaviour
 {
@@ -32,16 +34,41 @@ public class HallwayCrawlControl : MonoBehaviour
 
     public AudioSource explosionSource;
 
+    private bool upPressedKey;
+    public float durationBeforeSwitch;
+    private float timeOfSwitch;
+    public Image w1;
+    public Image w2;
+
     // Use this for initialization
     void Start()
     {
         numberOfPresses2 = (int)(1.5 * pressesBeforeMove);
         numberOfPresses3 = 2 * pressesBeforeMove;
+        timeOfSwitch = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if((Time.time - timeOfSwitch) > durationBeforeSwitch)
+        {
+            if(upPressedKey)
+            {
+                upPressedKey = false;
+                w1.enabled = true;
+                w2.enabled = false;
+                timeOfSwitch = Time.time;
+            }
+            else
+            {
+                timeOfSwitch = Time.time;
+                upPressedKey = true;
+                w1.enabled = false;
+                w2.enabled = true;
+            }
+        }
+
         if(shawnTransform.position.z < -250 && shawnTransform.position.z > -425)
         {
             if(!exp1)

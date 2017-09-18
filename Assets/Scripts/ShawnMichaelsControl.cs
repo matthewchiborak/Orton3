@@ -1167,6 +1167,11 @@ public class ShawnMichaelsControl : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Fireball"))
+        {
+            hitByBullet();
+            Destroy(other.gameObject);
+        }
         if (other.CompareTag("OrtonBossAttack"))
         {
             rkoSource.Play();

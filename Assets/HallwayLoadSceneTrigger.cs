@@ -37,7 +37,7 @@ public class HallwayLoadSceneTrigger : MonoBehaviour {
             string data;
 
             
-            data = ((int)sceneToLoad).ToString() + "~0~" + parsedLine[2] + "~" + parsedLine[3] + "~" + parsedLine[4] + "~" + parsedLine[5] + "~" + parsedLine[6] + "~" + parsedLine[7] + "~" + parsedLine[8];
+            data = ((int)sceneToLoad).ToString() + "~0~" + parsedLine[2] + "~" + parsedLine[3] + "~" + parsedLine[4] + "~" + parsedLine[5] + "~" + parsedLine[6] + "~" + parsedLine[7];
             
             System.IO.File.WriteAllText("Assets/Resources/Save.txt", data);
 
