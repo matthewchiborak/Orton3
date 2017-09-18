@@ -309,6 +309,23 @@ public class NewStoredInfoScript : MonoBehaviour {
     }
 
 
+    public void hitByFinalBoss()
+    {
+        currentHealth -= 25;
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+        }
+
+        healthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 1, 1);
+
+        //Game over if game is over
+        if (currentHealth == 0)
+        {
+            gameOver();
+        }
+    }
 
     public void hitByBullet()
     {

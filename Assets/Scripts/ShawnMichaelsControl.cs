@@ -573,6 +573,39 @@ public class ShawnMichaelsControl : MonoBehaviour {
         }
     }
 
+    public void hitByFinalBoss()
+    {
+        if (invincibility <= 0)
+        {
+            if (isHuman)
+            {
+                anim.SetBool("IsCrouching", false);
+                storedInfo.hitByFinalBoss();
+                anim.SetBool("IsWalking", false);
+                anim.SetBool("IsRunning", false);
+                hurtSound.Play();
+                footSteps.Stop();
+                invincibility = 360;
+                cooldown = 220;
+                controlsEnabled = false;
+                anim.Play("Armature|Hit", -1, 0f);
+            }
+            else
+            {
+                anim2.SetBool("IsCrouching", false);
+                storedInfo.hitByFinalBoss();
+                anim2.SetBool("IsWalking", false);
+                anim2.SetBool("IsRunning", false);
+                hurtSound.Play();
+                footSteps.Stop();
+                invincibility = 360;
+                cooldown = 220;
+                controlsEnabled = false;
+                anim2.Play("Armature|Hit", -1, 0f);
+            }
+        }
+    }
+
     public void hitByTrump()
     {
         if (invincibility <= 0)
@@ -1172,6 +1205,26 @@ public class ShawnMichaelsControl : MonoBehaviour {
             hitByBullet();
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("BallShot") && !sweetChinHitbox.enabled)
+        {
+            hitByFinalBoss();
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("OrtonFinalBossAttack") && !sweetChinHitbox.enabled)
+        {
+            hitByFinalBoss();
+            rkoSource.Play();
+        }
+        if (other.CompareTag("Sword"))
+        {
+            hitByFinalBoss();
+        }
+        if (other.CompareTag("Meteor"))
+        {
+            hitByFinalBoss();
+        }
+
         if (other.CompareTag("OrtonBossAttack"))
         {
             rkoSource.Play();
